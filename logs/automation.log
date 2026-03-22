@@ -1,0 +1,2 @@
+12:48:57.182 [main] INFO  pageObjects.NewsletterSubscriptionPage - Phần tử [No radio] selected = true
+12:48:57.183 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_006_registerWithNewsletterSubscriptionNo *****

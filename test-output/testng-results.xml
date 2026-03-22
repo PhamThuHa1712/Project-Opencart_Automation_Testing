@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-22T12:46:51 ICT" name="Suite" finished-at="2026-03-22T12:47:17 ICT" duration-ms="26083">
+    <groups>
+      <group name="Master">
+        <method signature="RegisterPositiveTest.TC_RF_001_registerWithMandatoryFields()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_001_registerWithMandatoryFields" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_002_verifyRegistrationConfirmationEmail()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_002_verifyRegistrationConfirmationEmail" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_003_registerWithAllFields()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_003_registerWithAllFields" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_005_registerWithNewsletterSubscriptionYes()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_005_registerWithNewsletterSubscriptionYes" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_006_registerWithNewsletterSubscriptionNo()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_006_registerWithNewsletterSubscriptionNo" class="testCases.register.RegisterPositiveTest"/>
+      </group> <!-- Master -->
+      <group name="Regression">
+        <method signature="RegisterPositiveTest.TC_RF_001_registerWithMandatoryFields()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_001_registerWithMandatoryFields" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_002_verifyRegistrationConfirmationEmail()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_002_verifyRegistrationConfirmationEmail" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_003_registerWithAllFields()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_003_registerWithAllFields" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_005_registerWithNewsletterSubscriptionYes()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_005_registerWithNewsletterSubscriptionYes" class="testCases.register.RegisterPositiveTest"/>
+        <method signature="RegisterPositiveTest.TC_RF_006_registerWithNewsletterSubscriptionNo()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" name="TC_RF_006_registerWithNewsletterSubscriptionNo" class="testCases.register.RegisterPositiveTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2026-03-22T12:46:51 ICT" name="Test" finished-at="2026-03-22T12:47:17 ICT" duration-ms="26083">
+      <class name="testCases.register.RegisterPositiveTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:46:51 ICT" name="setup" finished-at="2026-03-22T12:46:52 ICT" duration-ms="1263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:46:52 ICT" name="resetPageState" finished-at="2026-03-22T12:46:54 ICT" duration-ms="1844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_RF_001_registerWithMandatoryFields()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:46:54 ICT" name="TC_RF_001_registerWithMandatoryFields" finished-at="2026-03-22T12:46:57 ICT" duration-ms="2811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_RF_001_registerWithMandatoryFields -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:46:57 ICT" name="resetPageState" finished-at="2026-03-22T12:46:57 ICT" duration-ms="393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_RF_002_verifyRegistrationConfirmationEmail()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:46:57 ICT" name="TC_RF_002_verifyRegistrationConfirmationEmail" finished-at="2026-03-22T12:46:58 ICT" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_RF_002_verifyRegistrationConfirmationEmail -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:46:58 ICT" name="resetPageState" finished-at="2026-03-22T12:46:59 ICT" duration-ms="1226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_RF_003_registerWithAllFields()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:46:59 ICT" name="TC_RF_003_registerWithAllFields" finished-at="2026-03-22T12:47:02 ICT" duration-ms="2239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_RF_003_registerWithAllFields -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:47:02 ICT" name="resetPageState" finished-at="2026-03-22T12:47:02 ICT" duration-ms="437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_RF_005_registerWithNewsletterSubscriptionYes()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:47:02 ICT" name="TC_RF_005_registerWithNewsletterSubscriptionYes" finished-at="2026-03-22T12:47:05 ICT" duration-ms="2891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_RF_005_registerWithNewsletterSubscriptionYes -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:47:05 ICT" name="resetPageState" finished-at="2026-03-22T12:47:05 ICT" duration-ms="417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_RF_006_registerWithNewsletterSubscriptionNo()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:47:05 ICT" name="TC_RF_006_registerWithNewsletterSubscriptionNo" finished-at="2026-03-22T12:47:16 ICT" duration-ms="11097" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Test dừng do không lấy được text từ: Thông báo đăng ký thành công!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Test dừng do không lấy được text từ: Thông báo đăng ký thành công!
+at pageObjects.BasePage.getText(BasePage.java:67)
+at pageObjects.AccountRegistrationPage.getConfirmationMsg(AccountRegistrationPage.java:103)
+at testCases.register.RegisterPositiveTest.TC_RF_006_registerWithNewsletterSubscriptionNo(RegisterPositiveTest.java:172)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h1[normalize-space()='Your Account Has Been Created!'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[normalize-space()='Your Account Has Been Created!']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.81, chrome: {chromedriverVersion: 146.0.7680.153 (85fd829a1b2..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62130}, goog:processID: 10684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62130/devtoo..., se:cdpVersion: 146.0.7680.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 562f517767b0c62250119f4932017031
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+at pageObjects.BasePage.getText(BasePage.java:62)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_RF_006_registerWithNewsletterSubscriptionNo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.register.RegisterPositiveTest@18a136ac]" started-at="2026-03-22T12:47:17 ICT" name="tearDown" finished-at="2026-03-22T12:47:17 ICT" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.register.RegisterPositiveTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

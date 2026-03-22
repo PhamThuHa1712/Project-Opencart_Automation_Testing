@@ -1,0 +1,41 @@
+20:50:10.561 [main] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+20:50:10.817 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'CUOBC' vào [Ô First Name]
+20:50:11.086 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'NKAFW' vào [Ô Last Name]
+20:50:11.287 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'cpcOs@gmail.com' vào [Ô Email]
+20:50:11.486 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '2684094010' vào [Ô Telephone]
+20:50:11.674 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'ANx714' vào [Ô Password]
+20:50:11.864 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'ANx714' vào [Ô ConfirmPassword]
+20:50:12.034 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+20:50:14.762 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+20:50:14.762 [main] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..
+20:50:14.858 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+20:50:14.934 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo xác nhận gửi e-mail] là: 'A confirmation has been sent to the provided e-mail address. If you have not received it within the hour, please contact us.'
+20:50:15.504 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+20:50:15.504 [main] INFO  testCases.register.RegisterPositiveTest - Validating ER-2: My Account Page Exists..
+20:50:15.564 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_001_registerWithMandatoryFields *****
+20:50:16.435 [main] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_002_verifyRegistrationConfirmationEmail *****
+20:50:16.990 [main] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+20:50:17.179 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'HIGBG' vào [Ô First Name]
+20:50:17.358 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'TOXFX' vào [Ô Last Name]
+20:50:17.559 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'aoyFs@gmail.com' vào [Ô Email]
+20:50:17.740 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '7798532535' vào [Ô Telephone]
+20:50:17.912 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'tCO872' vào [Ô Password]
+20:50:18.092 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'tCO872' vào [Ô ConfirmPassword]
+20:50:18.258 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+20:50:18.420 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+20:50:18.420 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_002_verifyRegistrationConfirmationEmail *****
+23:33:26.104 [main] DEBUG org.testng.TestNG - suiteXmlPath: "D:\workspace\workspace_new\Project-OpenCart\master.xml"
+23:33:26.339 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\workspace\workspace_new\Project-OpenCart\master.xml
+
+23:33:30.020 [main] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_001_registerWithMandatoryFields *****
+23:33:30.408 [main] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+23:33:30.540 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'PTXQY' vào [Ô First Name]
+23:33:30.644 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'DGZDC' vào [Ô Last Name]
+23:33:30.753 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'ivUAD@gmail.com' vào [Ô Email]
+23:33:30.847 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '0026161624' vào [Ô Telephone]
+23:33:30.946 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'UCT396' vào [Ô Password]
+23:33:31.045 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'UCT396' vào [Ô ConfirmPassword]
+23:33:31.136 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+23:33:33.547 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+23:33:33.548 [main] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..

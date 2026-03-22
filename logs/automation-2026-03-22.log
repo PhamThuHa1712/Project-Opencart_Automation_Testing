@@ -1,0 +1,41 @@
+12:48:50.474 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+12:48:50.690 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+12:48:50.714 [main] INFO  pageObjects.MyAccountPage - Phần tử [My Account] displayed = true
+12:48:50.714 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_003_registerWithAllFields *****
+12:48:51.195 [main] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_005_registerWithNewsletterSubscriptionYes *****
+12:48:51.262 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+12:48:51.506 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+12:48:51.506 [main] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+12:48:51.586 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'PFOGK' vào [Ô First Name]
+12:48:51.667 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'KJXDV' vào [Ô Last Name]
+12:48:51.755 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'AeAAH@gmail.com' vào [Ô Email]
+12:48:51.839 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '4444135994' vào [Ô Telephone]
+12:48:51.911 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'GHw619' vào [Ô Password]
+12:48:51.986 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'GHw619' vào [Ô ConfirmPassword]
+12:48:52.053 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Lựa chọn Yes trong NewsLetter]
+12:48:52.116 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+12:48:52.180 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+12:48:53.674 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+12:48:53.674 [main] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..
+12:48:53.933 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+12:48:53.956 [main] INFO  pageObjects.MyAccountPage - Phần tử [My Account] displayed = true
+12:48:54.234 [main] INFO  pageObjects.MyAccountPage - Thành công: Đã click vào [Subscribe / unsubscribe to newsletter]
+12:48:54.259 [main] INFO  pageObjects.NewsletterSubscriptionPage - Phần tử [Yes radio] selected = true
+12:48:54.259 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_005_registerWithNewsletterSubscriptionYes *****
+12:48:54.793 [main] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_006_registerWithNewsletterSubscriptionNo *****
+12:48:54.858 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+12:48:55.082 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+12:48:55.082 [main] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+12:48:55.160 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'BTRUC' vào [Ô First Name]
+12:48:55.233 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'WOABF' vào [Ô Last Name]
+12:48:55.320 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'kUqsC@gmail.com' vào [Ô Email]
+12:48:55.397 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '7798839676' vào [Ô Telephone]
+12:48:55.470 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'gRS515' vào [Ô Password]
+12:48:55.547 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'gRS515' vào [Ô ConfirmPassword]
+12:48:55.610 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+12:48:56.658 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+12:48:56.682 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+12:48:56.682 [main] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..
+12:48:56.905 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+12:48:56.936 [main] INFO  pageObjects.MyAccountPage - Phần tử [My Account] displayed = true
+12:48:57.156 [main] INFO  pageObjects.MyAccountPage - Thành công: Đã click vào [Subscribe / unsubscribe to newsletter]

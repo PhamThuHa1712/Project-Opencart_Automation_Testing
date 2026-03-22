@@ -1,0 +1,41 @@
+23:40:28.358 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Lựa chọn Yes trong NewsLetter]
+23:40:28.431 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+23:40:30.802 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+23:40:30.835 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+23:40:31.069 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+23:40:31.086 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_003_registerWithAllFields *****
+23:40:31.521 [main] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_005_registerWithNewsletterSubscriptionYes *****
+23:40:31.603 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+23:40:31.861 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+23:40:31.862 [main] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+23:40:31.952 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'MRVDE' vào [Ô First Name]
+23:40:32.039 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'ZSLSY' vào [Ô Last Name]
+23:40:32.144 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'aeSyV@gmail.com' vào [Ô Email]
+23:40:32.246 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '2460427655' vào [Ô Telephone]
+23:40:32.330 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'Rry604' vào [Ô Password]
+23:40:32.425 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'Rry604' vào [Ô ConfirmPassword]
+23:40:32.509 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Lựa chọn Yes trong NewsLetter]
+23:40:32.583 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+23:40:34.929 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+23:40:34.959 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+23:40:34.960 [main] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..
+23:40:35.220 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+23:40:35.658 [main] INFO  pageObjects.MyAccountPage - Thành công: Đã click vào [Subscribe / unsubscribe to newsletter]
+23:40:35.691 [main] INFO  pageObjects.NewsletterSubscriptionPage - Phần tử [Yes radio] selected = true
+23:40:35.691 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_005_registerWithNewsletterSubscriptionYes *****
+23:40:36.152 [main] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_006_registerWithNewsletterSubscriptionNo *****
+23:40:36.229 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+23:40:36.460 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+23:40:36.460 [main] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+23:40:36.554 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'GZBNW' vào [Ô First Name]
+23:40:36.653 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'VILIM' vào [Ô Last Name]
+23:40:36.755 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'uOxYr@gmail.com' vào [Ô Email]
+23:40:36.848 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '6489418125' vào [Ô Telephone]
+23:40:36.934 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'wrP367' vào [Ô Password]
+23:40:37.019 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'wrP367' vào [Ô ConfirmPassword]
+23:40:37.096 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+23:40:37.178 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+23:40:39.514 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+23:40:39.515 [main] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..
+23:40:39.754 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+23:40:39.992 [main] INFO  pageObjects.MyAccountPage - Thành công: Đã click vào [Subscribe / unsubscribe to newsletter]
