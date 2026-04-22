@@ -1,0 +1,38 @@
+11:20:09.228 [TestNG-tests-2] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..
+11:20:09.388 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+11:20:09.454 [TestNG-tests-1] INFO  pageObjects.MyAccountPage - Phần tử [My Account] displayed = true
+11:20:09.473 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+11:20:09.527 [TestNG-tests-2] INFO  pageObjects.MyAccountPage - Phần tử [My Account] displayed = true
+11:20:09.900 [TestNG-tests-2] INFO  pageObjects.MyAccountPage - Thành công: Đã click vào [Subscribe / unsubscribe to newsletter]
+11:20:09.921 [TestNG-tests-1] INFO  pageObjects.MyAccountPage - Thành công: Đã click vào [Subscribe / unsubscribe to newsletter]
+11:20:09.957 [TestNG-tests-2] INFO  pageObjects.NewsletterSubscriptionPage - Phần tử [Yes radio] selected = true
+11:20:09.958 [TestNG-tests-2] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_005_registerWithNewsletterSubscriptionYes *****
+11:20:09.995 [TestNG-tests-1] INFO  pageObjects.NewsletterSubscriptionPage - Phần tử [Yes radio] selected = true
+11:20:09.995 [TestNG-tests-1] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_005_registerWithNewsletterSubscriptionYes *****
+11:20:10.837 [TestNG-tests-1] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_006_registerWithNewsletterSubscriptionNo *****
+11:20:10.992 [TestNG-tests-1] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+11:20:11.386 [TestNG-tests-1] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+11:20:11.387 [TestNG-tests-1] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+11:20:11.475 [TestNG-tests-2] INFO  testCases.register.RegisterPositiveTest - ***** Starting TC_RF_006_registerWithNewsletterSubscriptionNo *****
+11:20:11.599 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'DJLKFPYYZX' vào [Ô First Name]
+11:20:11.602 [TestNG-tests-2] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+11:20:11.791 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'XENQLLWSQC' vào [Ô Last Name]
+11:20:11.881 [TestNG-tests-2] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+11:20:11.881 [TestNG-tests-2] INFO  testCases.register.RegisterPositiveTest - Providing customer details...
+11:20:11.968 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'UMLLBDKELO' vào [Ô First Name]
+11:20:12.035 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'MZLpUdoaup@gmail.com' vào [Ô Email]
+11:20:12.076 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'IBXYKFMAGU' vào [Ô Last Name]
+11:20:12.184 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'kmWvqYSnQb@gmail.com' vào [Ô Email]
+11:20:12.299 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '4772144437' vào [Ô Telephone]
+11:20:12.320 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '4346813707' vào [Ô Telephone]
+11:20:12.403 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'cYa322' vào [Ô Password]
+11:20:12.478 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'cYa322' vào [Ô ConfirmPassword]
+11:20:12.525 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'NTW568' vào [Ô Password]
+11:20:12.598 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+11:20:12.726 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'NTW568' vào [Ô ConfirmPassword]
+11:20:12.863 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Ô check Privacy Policy]
+11:20:13.013 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+11:20:14.169 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+11:20:14.229 [TestNG-tests-2] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'
+11:20:14.229 [TestNG-tests-2] INFO  testCases.register.RegisterPositiveTest - Validating ER-1: Expected message..
+11:20:14.325 [TestNG-tests-1] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo đăng ký thành công!] là: 'Your Account Has Been Created!'

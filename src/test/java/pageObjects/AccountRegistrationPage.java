@@ -1,9 +1,14 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import models.RegisterData;
 
 public class AccountRegistrationPage extends BasePage{
 	
@@ -33,52 +38,69 @@ public class AccountRegistrationPage extends BasePage{
 
 	private final By btnContinue = By.xpath("//input[@value='Continue']");
 
-	private final By msgConfirmation = By.xpath("//h1[normalize-space()='Your Account Has Been Created!']");
-
-	private final By btnCtn = By.xpath("//a[normalize-space()='Continue']");
-
-	private final By msgEmail = By.xpath("//p[contains(text(),'A confirmation has been sent to the provided e-mail')]");
+	private final By msgFirstName = By.xpath("//input[@name='firstname']/following-sibling::div[@class='text-danger']");
+	
+	private final By msgLastName = By.xpath("//input[@name='lastname']/following-sibling::div[@class='text-danger']");
+	
+	private final By msgEmail = By.xpath("//input[@name='email']/following-sibling::div[@class='text-danger']");
+	
+	private final By msgTelephone = By.xpath("//input[@name='telephone']/following-sibling::div[@class='text-danger']"); 
+	
+	private final By msgPassword = By.xpath("//input[@name='password']/following-sibling::div[@class='text-danger']");
+	
+	private final By msgConfPassword = By.xpath("//input[@name='confirm']/following-sibling::div[@class='text-danger']");
+	
+	private final By msgPrivacyPolicy = By.cssSelector("div.alert.alert-danger.alert-dismissible");
 	
 	// Action Methods
-	public void setFirstName(String fname) {
-		type(txtFirstname, fname, "Ô First Name");
+	public AccountRegistrationPage setFirstName(String fname) {
+		type(txtFirstname, fname, "Trường First Name");
+		return this;
 	}
 	
-	public void setLastName(String lname) {
-		type(txtLastname, lname, "Ô Last Name");
+	public AccountRegistrationPage setLastName(String lname) {
+		type(txtLastname, lname, "Trường Last Name");
+		return this;
 	}
 	
-	public void setEmail(String email) {
-		type(txtEmail, email, "Ô Email");
+	public AccountRegistrationPage setEmail(String email) {
+		type(txtEmail, email, "Trường Email");
+		return this;
 	}
 
-	public void setTelephone(String tel) {
-		type(txtTelephone, tel, "Ô Telephone");
+	public AccountRegistrationPage setTelephone(String tel) {
+		type(txtTelephone, tel, "Trường Telephone");
+		return this;
 	}
 	
-	public void setPassword(String pwd) {
-		type(txtPassword, pwd, "Ô Password");
+	public AccountRegistrationPage setPassword(String pwd) {
+		type(txtPassword, pwd, "Trường Password");
+		return this;
+	}
+	public AccountRegistrationPage setConfirmPassword(String pwd) {
+		type(txtConfirmPassword, pwd, "Trường ConfirmPassword");
+		return this;
+	}
+	
+	public AccountRegistrationPage selectNewsletter(boolean value) {
+	    if (value) {
+	        click(radioYes, "Lựa chọn Yes trong NewsLetter");
+	    } else {
+	        click(radioNo, "Lựa chọn No trong NewsLetter");
+	    }
+        return this;
+	}
+	
+	public AccountRegistrationPage setPrivacyPolicy() {
+		click(chkbPolicy, "Trường check Privacy Policy");
+		return this;
 	}
 
-	public void setConfirmPassword(String pwd) {
-		type(txtConfirmPassword, pwd, "Ô ConfirmPassword");
-	}
 	
-	public void setRadioYes() {
-		click(radioYes, "Lựa chọn Yes trong NewsLetter");
-	}
-	
-	public void setRadioNo() {
-		click(radioNo, "Lựa chọn No trong NewsLetter");
-	}
-	
-	public void setPrivacyPolicy() {
-		click(chkbPolicy, "Ô check Privacy Policy");
-	}
-	
-	public void clickContinue() {
+	public AccountSuccessPage clickContinueSuccess() {
 	    //sol1
 		click(btnContinue, "Nút Continue");
+		return new AccountSuccessPage(driver);
 
 	    //sol2
 	    //btnContinue.submit();
@@ -91,7 +113,7 @@ public class AccountRegistrationPage extends BasePage{
 	    //JavascriptExecutor js=(JavascriptExecutor)driver;
 	    //js.executeScript("arguments[0].click();", btnContinue);
 
-	    //Sol 5
+	    //Sol5
 	    //btnContinue.sendKeys(Keys.RETURN);
 
 	    //Sol6
@@ -99,15 +121,89 @@ public class AccountRegistrationPage extends BasePage{
 	    //mywait.until(ExpectedConditions.elementToBeClickable(btnContinue)).click();
 	}
 	
-	public String getConfirmationMsg() {
-	    return getText(msgConfirmation, "Thông báo đăng ký thành công!");
+	public AccountRegistrationPage clickContinueFail() {
+		click(btnContinue, "Nút Continue");
+		return this;
 	}
 	
-	public String getConfirmationEmail() {
-		return getText(msgEmail, "Thông báo xác nhận gửi e-mail");
+	
+	
+	public AccountSuccessPage fillRegistrationFormByKeyboard(RegisterData data) {
+		tabUntilElementFound("firstname", 30, "Trường First Name");
+		sendKeysToActiveElement("Trường First Name", data.getFirstName());
+		tabUntilElementFound("lastname", 3, "Trường Last Name");
+	    sendKeysToActiveElement("Trường Last Name", data.getLastName());
+	    tabUntilElementFound("email", 3, "Trường Email");
+	    sendKeysToActiveElement("Trường Email", data.getEmail());
+	    tabUntilElementFound("telephone", 3, "Trường Telephone");
+	    sendKeysToActiveElement("Trường Telephone", data.getPhone());
+	    tabUntilElementFound("password", 3, "Trường Password");
+	    sendKeysToActiveElement("Trường Password", data.getPassword());
+	    tabUntilElementFound("confirm", 3, "Trường Confirm Password");
+	    sendKeysToActiveElement("Trường Confirm Password", data.getConfirmPassword());
+	    tabUntilElementFound("newsletter", 3, "Trường Newsletter");
+	    pressSpace("Newsletter");
+	    tabUntilElementFound("agree", 3, "Trường Privacy Policy");
+	    pressSpace("Privacy Policy");
+	    tabUntilElementFound("Continue", 3, "Nút Continue");
+	    pressEnter("Nút Continue");
+	    return new AccountSuccessPage(driver);
 	}
 	
-	public void clickCnt() {
-		click(btnCtn, "Nút Continue");
+	public String displayMsgFirstName() {
+		return getText(msgFirstName, "Thông báo lỗi trường First Name");
+	}
+	
+	public String displayMsgLastName() {
+		return getText(msgLastName, "Thông báo lỗi trường Last Name");
+	}
+	
+	public String displayMsgEmail() {
+		return getText(msgEmail, "Thông báo lỗi trường Email");
+	}
+	
+	public String displayMsgPhone() {
+		return getText(msgTelephone, "Thông báo lỗi trường Phone");
+	}
+	
+	public String displayMsgPassword() {
+		return getText(msgPassword, "Thông báo lỗi trường Password");
+	}
+	
+	public String displayMsgConfPassword() {
+		return getText(msgConfPassword, "Thông báo lỗi trường Confirm Password");
+	}
+	
+	public String displayMsgPolicy() {
+		return getText(msgPrivacyPolicy, "Thông báo lỗi trường Privacy Policy");
+	}
+	
+	public String displayEmailExists() {
+		return getText(msgPrivacyPolicy, "Thông báo lỗi email đã tồn tại!");
+	}
+	
+	public AccountRegistrationPage fillRegisterForm(RegisterData data) {
+		setFirstName(data.getFirstName());
+		setLastName(data.getLastName());
+		setEmail(data.getEmail());
+		setTelephone(data.getPhone());
+		setPassword(data.getPassword());
+		setConfirmPassword(data.getConfirmPassword());
+		selectNewsletter(data.isNewsletter());
+		if(data.isPrivacyPolicy()) {
+			setPrivacyPolicy();
+		}
+		return this;
+	}
+	
+	
+	public boolean isPhoneErrorDisplayed() {
+	    try {
+	        List<WebElement> errors = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(msgTelephone));
+	        return errors.size() > 0;
+	    } catch (TimeoutException e) {
+	        logger.info("Thông báo lỗi điện thoại không xuất hiện.");
+	        return false;
+	    }
 	}
 }

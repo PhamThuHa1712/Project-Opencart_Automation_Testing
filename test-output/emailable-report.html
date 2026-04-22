@@ -9,30 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">26,083</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,983</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.register.RegisterPositiveTest</td><td><a href="#m0">TC_RF_006_registerWithNewsletterSubscriptionNo</a></td><td rowspan="1">1774158425838</td><td rowspan="1">11097</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">testCases.register.RegisterPositiveTest</td><td><a href="#m1">TC_RF_001_registerWithMandatoryFields</a></td><td rowspan="1">1774158414485</td><td rowspan="1">2811</td></tr><tr class="passedeven"><td><a href="#m2">TC_RF_002_verifyRegistrationConfirmationEmail</a></td><td rowspan="1">1774158417702</td><td rowspan="1">918</td></tr><tr class="passedeven"><td><a href="#m3">TC_RF_003_registerWithAllFields</a></td><td rowspan="1">1774158419849</td><td rowspan="1">2239</td></tr><tr class="passedeven"><td><a href="#m4">TC_RF_005_registerWithNewsletterSubscriptionYes</a></td><td rowspan="1">1774158422527</td><td rowspan="1">2891</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.checkout.CheckoutUITest</td><td><a href="#m0">TC_CO_008_Checkout_BillingPlaceholderCheck</a></td><td rowspan="1">1776792092041</td><td rowspan="1">3619</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testCases.register.RegisterPositiveTest#TC_RF_006_registerWithNewsletterSubscriptionNo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Test dừng do không lấy được text từ: Thông báo đăng ký thành công!
-	at pageObjects.BasePage.getText(BasePage.java:67)
-	at pageObjects.AccountRegistrationPage.getConfirmationMsg(AccountRegistrationPage.java:103)
-	at testCases.register.RegisterPositiveTest.TC_RF_006_registerWithNewsletterSubscriptionNo(RegisterPositiveTest.java:172)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //h1[normalize-space()=&apos;Your Account Has Been Created!&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[normalize-space()=&apos;Your Account Has Been Created!&apos;]&quot;}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.81, chrome: {chromedriverVersion: 146.0.7680.153 (85fd829a1b2..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62130}, goog:processID: 10684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62130/devtoo..., se:cdpVersion: 146.0.7680.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 562f517767b0c62250119f4932017031
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at pageObjects.BasePage.getText(BasePage.java:62)
-	... 28 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.register.RegisterPositiveTest#TC_RF_001_registerWithMandatoryFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testCases.register.RegisterPositiveTest#TC_RF_002_verifyRegistrationConfirmationEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testCases.register.RegisterPositiveTest#TC_RF_003_registerWithAllFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testCases.register.RegisterPositiveTest#TC_RF_005_registerWithNewsletterSubscriptionYes</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testCases.checkout.CheckoutUITest#TC_CO_008_Checkout_BillingPlaceholderCheck</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

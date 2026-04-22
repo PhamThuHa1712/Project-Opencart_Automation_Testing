@@ -7,9 +7,10 @@
     </listeners>
 
     <test name="Linux-Chrome">
+    		
         <parameter name="os" value="Linux"/>
         <parameter name="browser" value="chrome"/>
-
+	
         <classes>
             <class name="testCases.register.RegisterPositiveTest"/>
         </classes>

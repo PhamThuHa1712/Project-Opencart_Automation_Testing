@@ -1,2 +1,3 @@
-12:48:57.182 [main] INFO  pageObjects.NewsletterSubscriptionPage - Phần tử [No radio] selected = true
-12:48:57.183 [main] INFO  testCases.register.RegisterPositiveTest - ***** Finished TC_RF_006_registerWithNewsletterSubscriptionNo *****
+00:21:35.632 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô City] là: 'City'
+00:21:35.660 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô Post code] là: 'Post Code'
+00:21:35.660 [main] INFO  testCases.checkout.CheckoutUITest - ***** Kết thúc TC_CO_008_Checkout_BillingPlaceholderCheck *****

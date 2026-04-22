@@ -1,0 +1,44 @@
+19:54:04.122 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+19:54:08.873 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Login]
+19:54:08.891 [main] INFO  testCases.login.LoginSystemAndEnvironmentTest - ***** Bắt đầu TC_LF_017_LoginClosingBrowserWithoutLoggingOut *****
+19:54:09.135 [main] INFO  pageObjects.LoginPage - Thành công: Đã nhập giá trị 'phamngochoan@gmail.com' vào [Trường Email Address]
+19:54:09.318 [main] INFO  pageObjects.LoginPage - Thành công: Đã nhập giá trị 'test@123' vào [Trường Password]
+19:54:09.897 [main] INFO  pageObjects.LoginPage - Thành công: Đã click vào [Nút Login]
+19:54:19.993 [main] INFO  pageObjects.MyAccountPage - Lỗi: Phần tử [My Account] không hiển thị
+19:55:33.778 [main] DEBUG org.testng.TestNG - suiteXmlPath: "D:\workspace\workspace_new\Project-OpenCart\master.xml"
+19:55:34.304 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\workspace\workspace_new\Project-OpenCart\master.xml
+
+19:55:38.152 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+19:55:38.617 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Login]
+19:55:38.634 [main] INFO  testCases.login.LoginSystemAndEnvironmentTest - ***** Bắt đầu TC_LF_017_LoginClosingBrowserWithoutLoggingOut *****
+19:55:38.862 [main] INFO  pageObjects.LoginPage - Thành công: Đã nhập giá trị 'phamngochoan@gmail.com' vào [Trường Email Address]
+19:55:39.086 [main] INFO  pageObjects.LoginPage - Thành công: Đã nhập giá trị 'test@123' vào [Trường Password]
+19:55:39.841 [main] INFO  pageObjects.LoginPage - Thành công: Đã click vào [Nút Login]
+19:55:39.899 [main] INFO  pageObjects.MyAccountPage - Kiểm tra trạng thái hiển thị của [My Account]: Đang hiển thị.true
+19:55:39.931 [main] INFO  testCases.login.LoginSystemAndEnvironmentTest - Đã lưu 3 cookies và URL: http://localhost:8001/opencart/upload/index.php?route=account/account
+19:55:42.437 [main] INFO  pageObjects.MyAccountPage - Kiểm tra trạng thái hiển thị của [My Account]: Đang hiển thị.true
+19:55:42.437 [main] INFO  testCases.login.LoginSystemAndEnvironmentTest - ***** Kết thúc TC_LF_017 *****
+23:40:12.364 [main] DEBUG org.testng.TestNG - suiteXmlPath: "D:\workspace\workspace_new\Project-OpenCart\master.xml"
+23:40:12.607 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\workspace\workspace_new\Project-OpenCart\master.xml
+
+23:40:37.808 [main] DEBUG org.testng.TestNG - suiteXmlPath: "D:\workspace\workspace_new\Project-OpenCart\master.xml"
+23:40:38.018 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\workspace\workspace_new\Project-OpenCart\master.xml
+
+23:40:42.449 [main] INFO  testCases.addToCart.AddToCartPositiveTest - ***** Kết thúc TC_ATC_001_AddToCart_ProductDisplayPage *****
+23:40:52.826 [main] ERROR pageObjects.HomePage - Lỗi: Không thể nhập liệu vào [Ô tìm kiếm]. Chi tiết: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: input[name='search'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"input[name='search']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.101, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62166}, goog:processID: 764, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62166/devtoo..., se:cdpVersion: 147.0.7727.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6be22f20c56c3f265ea44674f110409d
+23:41:57.935 [main] DEBUG org.testng.TestNG - suiteXmlPath: "D:\workspace\workspace_new\Project-OpenCart\master.xml"
+23:41:58.153 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\workspace\workspace_new\Project-OpenCart\master.xml
+
+23:42:00.648 [main] INFO  testCases.addToCart.AddToCartPositiveTest - ***** Kết thúc TC_ATC_001_AddToCart_ProductDisplayPage *****
+23:42:00.775 [main] INFO  pageObjects.HomePage - Thành công: Đã nhập giá trị 'iMac' vào [Ô tìm kiếm]
+23:42:01.065 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Nút tìm kiếm]

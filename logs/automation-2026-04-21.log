@@ -1,0 +1,41 @@
+21:12:40.544 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam' vào [Address1]
+21:12:40.624 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị '' vào [Address2]
+21:12:40.700 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Hà Nội' vào [City]
+21:12:40.765 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị '' vào [Post Code]
+21:12:40.783 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy phần tử Country
+21:12:40.959 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy phần tử Region/state
+21:12:41.142 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Billing Details]
+21:12:41.691 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [I want to use an existing address in Delivary Details]: Đang được chọn.true
+21:12:41.722 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Địa chỉ giao hàng trong mục Delivary Details] là: 'Pham Ha, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        abc def, Vân Đình - Hà Nội, Hà Nội, Ha Noi, Viet Nam
+                        abc def, Vân Đình - Hà Nội, Hà Nội, Ha Noi, Viet Nam
+                        Leo Armstrong, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Joesph Bradtke, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam'
+21:12:41.806 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Delivery Details]
+21:12:42.351 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Flat Shipping Rate]: Đang được chọn.true
+21:12:42.420 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Delivery Method]
+21:12:42.957 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Cash On Delivery]: Đang được chọn.true
+21:12:43.032 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Checkbox Terms & Conditions]
+21:12:43.105 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Payment Method]
+21:12:43.635 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã tìm thấy 1 phần tử của [Các hàng của bảng]
+21:12:43.644 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã tìm thấy 5 phần tử của [Các cột của bảng]
+21:12:43.668 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Hàng 1Cột 1] là: 'iMac'
+21:12:43.689 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Hàng 1Cột 2] là: 'Product 14'
+21:12:43.710 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Hàng 1Cột 3] là: '1'
+21:12:43.733 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Hàng 1Cột 4] là: '$100.00'
+21:12:43.752 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Hàng 1Cột 5] là: '$100.00'
+21:12:43.776 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Sub-Total] là: '$100.00'
+21:12:43.800 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Flat Shipping Rate] là: '$5.00'
+21:12:43.825 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Total] là: '$105.00'
+21:12:43.893 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút ConfirmOrder]
+21:12:48.522 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã đóng cảnh báo trong trang Checkout
+21:12:48.604 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút ConfirmOrder]
+21:12:49.151 [main] INFO  pageObjects.OrderSuccessPage - Kiểm tra trạng thái hiển thị của [Thông báo đặt hàng thành công]: Đang hiển thị.true
+21:12:49.151 [main] INFO  testCases.checkout.CheckoutPositiveTest - ***** Kết thúc TC_CO_006_Checkout_RegUser_NewBillingMandatory *****
+23:29:06.070 [main] DEBUG org.testng.TestNG - suiteXmlPath: "D:\workspace\workspace_new\Project-OpenCart\master.xml"
+23:29:06.339 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\workspace\workspace_new\Project-OpenCart\master.xml
+
+23:29:13.281 [main] INFO  testCases.checkout.CheckoutNegativeTest - ***** Bắt đầu TC_CO_001_Checkout_EmptyCartRestriction *****
+23:29:13.681 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Nút Checkout]
+23:29:13.717 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Thông báo giỏ hàng đang trống] là: 'Your shopping cart is empty!'

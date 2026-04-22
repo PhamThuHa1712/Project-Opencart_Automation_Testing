@@ -114,7 +114,7 @@ public class BaseClass {
 
 	public String randomString()
 	{
-	    String generatedstring=RandomStringUtils.randomAlphabetic(5);
+	    String generatedstring=RandomStringUtils.randomAlphabetic(10);
 	    return generatedstring;
 	}
 	

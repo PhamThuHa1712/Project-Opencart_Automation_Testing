@@ -54,12 +54,13 @@ public class ExcelUtility {
              XSSFWorkbook workbook = new XSSFWorkbook(fi)) {
              
             XSSFSheet sheet = workbook.getSheet(sheetName);
-            if (sheet == null) return "";
+            if (sheet == null) throw new RuntimeException("LỖI DATA: Không tìm thấy sheet có tên là [" + sheetName + "] trong file Excel!");
             
             XSSFRow row = sheet.getRow(rownum);
             if (row == null) return "";
             
             XSSFCell cell = row.getCell(colnum);
+            if (cell == null) return "";
             
             // DataFormatter, cell null nó tự trả về chuỗi rỗng, không cần try-catch
             DataFormatter formatter = new DataFormatter();
@@ -90,6 +91,15 @@ public class ExcelUtility {
 
             XSSFCell cell = row.createCell(colnum);
             cell.setCellValue(data);
+            
+            /* Gộp ghi dữ liệu và tô màu
+            if (color != null) {
+	            CellStyle style = workbook.createCellStyle();
+	            style.setFillForegroundColor(color.getIndex());
+	            style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+	            cell.setCellStyle(style);
+	        }
+            */
 
             // Ghi lại xuống file
             try (FileOutputStream fo = new FileOutputStream(path)) {
@@ -103,11 +113,11 @@ public class ExcelUtility {
              XSSFWorkbook workbook = new XSSFWorkbook(fi)) {
              
             XSSFSheet sheet = workbook.getSheet(sheetName);
-            if (sheet == null) return;
+            if (sheet == null) throw new RuntimeException("Không tìm thấy Sheet: " + sheetName);
             XSSFRow row = sheet.getRow(rownum);
-            if (row == null) return;
+            if (row == null) row = sheet.createRow(rownum);
             XSSFCell cell = row.getCell(column);
-            if (cell == null) return;
+            if (cell == null) cell = row.createCell(column);
 
             CellStyle style = workbook.createCellStyle();
             style.setFillForegroundColor(color.getIndex());

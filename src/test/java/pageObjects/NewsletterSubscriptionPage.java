@@ -9,15 +9,11 @@ public class NewsletterSubscriptionPage extends BasePage {
 		super(driver);
 	}
 	
-	private final By radioYes = By.xpath("//input[@name='newsletter' and @value='1']");
+	private final By yesRadio = By.xpath("//input[@name='newsletter' and @value='1']");
 
-	private final By radioNo = By.xpath("//input[@name='newsletter' and @value='0']");
+	private final By noRadio = By.xpath("//input[@name='newsletter' and @value='0']");
 	
-	public boolean selectedYes() {
-		return isElementSelected(radioYes, "Yes radio");
-	}
-	
-	public boolean selectedNo() {
-		return isElementSelected(radioNo, "No radio");
+	public boolean isNewsletterSelected(boolean expected) {
+	    return expected ? isElementSelected(yesRadio, "Yes radio") : isElementSelected(noRadio, "No radio");
 	}
 }

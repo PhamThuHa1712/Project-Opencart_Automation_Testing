@@ -8,7 +8,16 @@
   	<parameter name="os" value="Windows"/>
   	<parameter name="browser" value="chrome"/> 
     <classes>
-      <class name="testCases.register.RegisterPositiveTest"/>
+      <!--<class name="testCases.register.RegisterPositiveTest"/>-->
+      <!--<class name="testCases.register.RegisterValidationTest"/>-->
+      <!--<class name="testCases.login.LoginPositiveTest"/>-->
+      <!--<class name="testCases.login.LoginNegativeTest"/>-->
+      <!--<class name="testCases.login.LoginSecurityTest"/>-->
+      <!--<class name="testCases.login.LoginSystemTest"/>-->
+	  <!--<class name="testCases.addToCart.AddToCartPositiveTest"/>-->
+	  <!--<class name="testCases.checkout.CheckoutPositiveTest"/>-->
+	  <!--<class name="testCases.checkout.CheckoutNegativeTest"/>-->
+	  <class name="testCases.checkout.CheckoutUITest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
