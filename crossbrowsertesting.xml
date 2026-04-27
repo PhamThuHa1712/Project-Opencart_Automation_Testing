@@ -4,19 +4,27 @@
 	<listeners>
 	    <listener class-name="utilities.ExtentReportManager" />
 	</listeners>
-  	<test name="chrometest">
-	    <parameter name="os" value="Windows"/>
-	    <parameter name="browser" value="chrome"/>
-	    <classes>
-	        <class name="testCases.register.RegisterPositiveTest"/>
-	    </classes>
-	</test>
-	
-	<test name="edgetest">
-	    <parameter name="os" value="Windows"/>
-	    <parameter name="browser" value="edge"/>
-	    <classes>
-	        <class name="testCases.register.RegisterPositiveTest"/>
-	    </classes>
-	</test>
+  	<test name="Chrome Test">
+        <parameter name="os" value="Windows"/>
+  		<parameter name="browser" value="chrome"/> 
+        <classes>
+            <class name="testCases.register.RegisterUITest">
+                <methods>
+                    <include name="TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Edge Test">
+    		<parameter name="os" value="Windows"/>
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="testCases.register.RegisterUITest">
+                <methods>
+                    <include name="TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite> 

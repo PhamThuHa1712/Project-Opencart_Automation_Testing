@@ -1,0 +1,33 @@
+21:19:51.300 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+21:19:51.845 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+21:19:51.847 [main] INFO  testCases.register.RegisterValidationTest - ***** Bắt đầu TC_RF_017_verifyPasswordComplexityStandards *****
+21:19:52.009 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'Lizeth' vào [Trường First Name]
+21:19:52.188 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'McCullough' vào [Trường Last Name]
+21:19:52.377 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'vanda.price@hotmail.com' vào [Trường Email]
+21:19:52.548 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '665-113-9651' vào [Trường Telephone]
+21:19:52.700 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'Abc@1234<' vào [Trường Password]
+21:19:52.859 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'Abc@1234<' vào [Trường ConfirmPassword]
+21:19:52.977 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Lựa chọn Yes trong NewsLetter]
+21:19:53.093 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Trường check Privacy Policy]
+21:19:55.707 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+21:20:06.131 [main] ERROR pageObjects.AccountRegistrationPage - Lỗi: Không tìm thấy text tại [Thông báo lỗi trường Password]. Chi tiết: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //input[@name='password']/following-sibling::div[@class='text-danger'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='password']/following-sibling::div[@class='text-danger']"}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64872}, goog:processID: 19784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64872/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f86193c7645cc8b0c0ac4b86bb14e9f4
+21:20:07.472 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+21:20:08.015 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+21:20:08.018 [main] INFO  testCases.register.RegisterValidationTest - ***** Bắt đầu TC_RF_021_verifyWarningWhenPrivacyPolicyNotAccepted *****
+21:20:08.186 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'Nedra' vào [Trường First Name]
+21:20:08.378 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'Sporer' vào [Trường Last Name]
+21:20:08.544 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'jone.bogisich@hotmail.com' vào [Trường Email]
+21:20:08.698 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '579.911.9614' vào [Trường Telephone]
+21:20:08.830 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'qnu0fyr' vào [Trường Password]
+21:20:08.986 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị 'qnu0fyr' vào [Trường ConfirmPassword]
+21:20:09.105 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Lựa chọn Yes trong NewsLetter]
+21:20:09.233 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+21:20:09.645 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Thông báo lỗi trường Privacy Policy] là: 'Warning: You must agree to the Privacy Policy!'
+21:20:09.646 [main] INFO  testCases.register.RegisterValidationTest - ***** Kết thúc TC_RF_021_verifyWarningWhenPrivacyPolicyNotAccepted *****
+21:20:10.543 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]

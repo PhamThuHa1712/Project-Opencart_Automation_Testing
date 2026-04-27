@@ -22,6 +22,8 @@ public class MyAccountPage extends BasePage {
 	
 	private final By logo = By.xpath("//img[@title='Your Store']");
 	
+	private final By lnkEditAccount = By.xpath("//a[normalize-space()='Edit Account']");
+	
 	public MyAccountPage clickMyAcc() {
 		click(myAccount, "Dropdown My Account");
 		return this;
@@ -58,5 +60,10 @@ public class MyAccountPage extends BasePage {
 	public HomePage toHomepage() {
 		click(logo, "Logo");
 		return new HomePage(driver);
+	}
+	
+	public MyAccountInformationPage clickEditAccount() {
+		click(lnkEditAccount, "Edit Account");
+		return new MyAccountInformationPage(driver);
 	}
 }

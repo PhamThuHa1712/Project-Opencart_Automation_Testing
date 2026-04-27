@@ -17,6 +17,19 @@ public class LoginPage extends BasePage {
 	private final By returningCustomer = By.xpath("//h2[normalize-space()='Returning Customer']");
 	private final By warnFalsePassword = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 	private final By warnExceeded = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
+	private final By btnCtnNewCustomer = By.cssSelector("a[class='btn btn-primary']");
+	private final By lnkRegisterInTheRightColumn = By.xpath("//a[@class='list-group-item'][normalize-space()='Register']");
+	
+	
+	public AccountRegistrationPage clickContinueNewCustomer() {
+		click(btnCtnNewCustomer, "Continue in New Customer of LoginPage");
+		return new AccountRegistrationPage(driver);
+	}
+	
+	public AccountRegistrationPage clickRegisterInTheRightColumn() {
+		click(lnkRegisterInTheRightColumn, "Register in the right column");
+		return new AccountRegistrationPage(driver);
+	}
 	
 	public LoginPage typeEmail(String email) {
 		type(txtEmail, email, "Trường Email Address");
@@ -93,6 +106,6 @@ public class LoginPage extends BasePage {
 		String typePwd = getAttribute(txtPassword, "Trường Password", type);
 		String rawHtml = getAttribute(txtPassword, "Trường Password", "outerHTML");
 		
-		return (typePwd.equals("password")) && (rawHtml.contains(password));
+		return (typePwd.equals("password")) && (!rawHtml.contains(password));
 	}
 }

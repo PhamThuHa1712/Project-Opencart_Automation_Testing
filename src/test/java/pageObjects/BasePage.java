@@ -8,12 +8,12 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -173,10 +173,8 @@ public class BasePage {
     protected boolean isElementDisplayed(By locator, String elementName) {
         try {
             WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-            boolean isDisplayed = el.isDisplayed();
-            logger.info("Kiểm tra trạng thái hiển thị của [" + elementName + "]: Đang hiển thị."  + isDisplayed);
-            
-            return isDisplayed;
+            logger.info("Kiểm tra trạng thái hiển thị của [" + elementName + "]: Đang hiển thị.");
+            return true;
         } catch (TimeoutException e) {
 	    		logger.info("Lỗi: Phần tử [" + elementName + "] không hiển thị");
 	        return false;
@@ -249,4 +247,10 @@ public class BasePage {
         }
     }
     
+    public String getPseudoElementProperty(By locator, String pseudoElement, String property) {
+    		WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    		
+    		JavascriptExecutor js = (JavascriptExecutor) driver;
+    		return (String) js.executeScript("return window.getComputedStyle(arguments[0], arguments[1]).getPropertyValue(arguments[2]);", ele, pseudoElement, property);
+    }
 }

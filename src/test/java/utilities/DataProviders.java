@@ -52,7 +52,23 @@ public class DataProviders {
 	        { "Số điện thoại chứa kí tự đặc biệt", "@#$%^&*", "Telephone is invalid!" }
 	    };
 	}
-	//DataProvider 4
+	
+	// DataProvider 4
+	@DataProvider(name="passwordValidationData")
+	public Object[][] passwordValidationData() {
+		return new Object[][] {
+			{"Độ dài mật khẩu không đủ 4 ký tự", "Ab@", "Password must be between 4 and 20 characters!"},
+			{"Độ dài mật khẩu vượt quá 20 ký tự", "Test@1234567890LongPassword!!", "Password must be between 4 and 20 characters!"},
+			{"Mật khẩu không chứa chữ hoa", "abc@1234", "Password must be between 4 and 20 characters!"},
+			{"Mật khẩu không chứa chữ thường", "ABC@1234", "Password must be between 4 and 20 characters!"},
+			{"Mật khẩu thiếu chữ số", "Abc@defg", "Password must be between 4 and 20 characters!"}, 
+			{"Mật khẩu thiếu ký tự đặc biệt", "Abc12345", "Password must be between 4 and 20 characters!"},
+			{"Mật khẩu chứa dấu cách", "Abc 1234@", "Password must be between 4 and 20 characters!"},
+			{"Mật khẩu chứa ký tự lạ", "Abc@1234<", "Password must be between 4 and 20 characters!"}
+		};
+	}
+	
+	//DataProvider 5
 	@DataProvider(name="loginValidationData")
 	public Object[][] loginValidationData() {
 		return new Object[][] {

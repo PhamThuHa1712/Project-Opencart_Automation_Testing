@@ -36,17 +36,18 @@ public class TestDataFactory {
                 .build();
     }
     
-    public static RegisterData multipleSpaceData() {
+    public static RegisterData multipleSpaceData(int spaceCount) {
+    		String spaces = " ".repeat(spaceCount);
     		return RegisterData.builder()
-    				.firstName("     ")
-                .lastName("     ")
-                .email("     ")
-                .phone("     ")
-                .password("     ")
-                .confirmPassword("     ")
-                .newsletter(true)
-                .privacyPolicy(true)
-                .build();
+    				.firstName(spaces)
+    	            .lastName(spaces)
+    	            .email(spaces)
+    	            .phone(spaces)
+    	            .password(spaces)
+    	            .confirmPassword(spaces)
+    	            .newsletter(true)
+    	            .privacyPolicy(false)
+    	            .build();
     }
 
     public static String getExistingEmail() {
@@ -69,5 +70,20 @@ public class TestDataFactory {
     				.country("Viet Nam")
     				.region_state("Ha Noi")
     				.build();
+    }
+    
+    public static RegisterData leadingAndTrailingSpaceData() {
+    		String space = " ".repeat(3);
+	    	String password = space + faker.internet().password(6, 10) + space;
+	        return RegisterData.builder()
+	                .firstName(space + faker.name().firstName() + space)
+	                .lastName(space + faker.name().lastName() + space)
+	                .email(space + faker.internet().emailAddress() + space)
+	                .phone(space + faker.phoneNumber().cellPhone() + space)
+	                .password(password)
+	                .confirmPassword(password)
+	                .newsletter(true)
+	                .privacyPolicy(true)
+	                .build();
     }
 }

@@ -1,9 +1,10 @@
 package pageObjects;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -52,7 +53,48 @@ public class AccountRegistrationPage extends BasePage{
 	
 	private final By msgPrivacyPolicy = By.cssSelector("div.alert.alert-danger.alert-dismissible");
 	
-	// Action Methods
+	private final By headerRegiterPage = By.cssSelector("div[id='content'] h1");
+	
+	private final By lnkMyAccount = By.cssSelector("a[title='My Account']");
+	
+	private final By lnkLogin = By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[contains(text(),'Login')]");
+	
+	private final By labelFirstName = By.cssSelector("label[for='input-firstname']");
+	
+	private final By labelLastName = By.cssSelector("label[for='input-lastname']");
+	
+	private final By labelEmail = By.cssSelector("label[for='input-email']");
+	
+	private final By labelTelephone = By.cssSelector("label[for='input-telephone']");
+	
+	private final By labelPassword = By.cssSelector("label[for='input-password']");
+	
+	private final By labelConfPassword = By.cssSelector("label[for='input-confirm']");
+	
+	private final By privacyPolicyText = By.cssSelector("div[class='pull-right']");
+	
+	private final By listBreadCrumb = By.cssSelector(".breadcrumb li");
+	
+	public enum RegisterField {
+	    TELEPHONE, PASSWORD, EMAIL, FIRSTNAME, LASTNAME, PASSWORD_CONFIRM
+	}
+	
+	
+	public boolean isPageRegisterHeading() {
+		return getText(headerRegiterPage, "Trang đăng ký").contains("Register Account");
+	}
+	
+	public AccountRegistrationPage clickMyAccount() {
+		click(lnkMyAccount, "My Account");
+		return this;
+	}
+	
+	public LoginPage clickLogin() {
+		click(lnkLogin, "Login");
+		return new LoginPage(driver);
+	}
+	
+	
 	public AccountRegistrationPage setFirstName(String fname) {
 		type(txtFirstname, fname, "Trường First Name");
 		return this;
@@ -91,8 +133,9 @@ public class AccountRegistrationPage extends BasePage{
         return this;
 	}
 	
-	public AccountRegistrationPage setPrivacyPolicy() {
-		click(chkbPolicy, "Trường check Privacy Policy");
+	public AccountRegistrationPage setPrivacyPolicy(boolean value) {
+		if(value)
+			click(chkbPolicy, "Trường check Privacy Policy");
 		return this;
 	}
 
@@ -125,7 +168,6 @@ public class AccountRegistrationPage extends BasePage{
 		click(btnContinue, "Nút Continue");
 		return this;
 	}
-	
 	
 	
 	public AccountSuccessPage fillRegistrationFormByKeyboard(RegisterData data) {
@@ -183,27 +225,114 @@ public class AccountRegistrationPage extends BasePage{
 	}
 	
 	public AccountRegistrationPage fillRegisterForm(RegisterData data) {
-		setFirstName(data.getFirstName());
-		setLastName(data.getLastName());
-		setEmail(data.getEmail());
-		setTelephone(data.getPhone());
-		setPassword(data.getPassword());
-		setConfirmPassword(data.getConfirmPassword());
-		selectNewsletter(data.isNewsletter());
-		if(data.isPrivacyPolicy()) {
-			setPrivacyPolicy();
-		}
-		return this;
+		return this
+			.setFirstName(data.getFirstName())
+			.setLastName(data.getLastName())
+			.setEmail(data.getEmail())
+			.setTelephone(data.getPhone())
+			.setPassword(data.getPassword())
+			.setConfirmPassword(data.getConfirmPassword())
+			.selectNewsletter(data.isNewsletter())
+			.setPrivacyPolicy(data.isPrivacyPolicy());
 	}
 	
-	
-	public boolean isPhoneErrorDisplayed() {
-	    try {
-	        List<WebElement> errors = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(msgTelephone));
-	        return errors.size() > 0;
-	    } catch (TimeoutException e) {
-	        logger.info("Thông báo lỗi điện thoại không xuất hiện.");
-	        return false;
+	public boolean waitForResponseFor(RegisterField field) {
+	    By targetElement;
+	    
+	    switch (field) {
+	    		case FIRSTNAME: targetElement = msgFirstName; break;
+	    		case LASTNAME: targetElement = msgLastName; break;
+	    		case EMAIL: targetElement = msgEmail; break;
+	        case TELEPHONE: targetElement = msgTelephone; break;
+	        case PASSWORD:  targetElement = msgPassword; break;
+	        default: throw new IllegalArgumentException("Trường không tồn tại");
 	    }
+	    try {
+	    		wait.until(ExpectedConditions.or(
+		        ExpectedConditions.urlContains("success"),
+		        ExpectedConditions.visibilityOfElementLocated(targetElement)
+	    		));
+	    } catch(Exception e) {
+	    		throw new RuntimeException("Hệ thống không phản hồi sau thời gian chờ", e);
+	    }
+	    return driver.getCurrentUrl().contains("success");
+	} 
+	
+	public String getFirstNamePlaceholder() {
+		return getAttribute(txtFirstname, "Ô nhập liệu FirstName", "placeholder");
+	}
+	
+	public String getLastNamePlaceholder() {
+		return getAttribute(txtLastname, "Ô nhập liệu LastName", "placeholder");
+	}
+	
+	public String getEmailPlaceholder() {
+		return getAttribute(txtEmail, "Ô nhập liệu Email", "placeholder");
+	}
+	
+	public String getTelephonePlaceholder() {
+		return getAttribute(txtTelephone, "Ô nhập liệu Telephone", "placeholder");
+	}
+	
+	public String getPasswordPlaceholder() {
+		return getAttribute(txtPassword, "Ô nhập liệu Password", "placeholder");
+	}
+	
+	public String getConfirmPasswordPlaceholder() {
+		return getAttribute(txtConfirmPassword, "Ô nhập liệu Confirm Password", "placeholder");
+	}
+	
+	private String getPseudoEle(RegisterField field, String property) {
+	    By targetElement;
+
+	    switch(field) {
+	        case FIRSTNAME: targetElement = labelFirstName; break;
+	        case LASTNAME: targetElement = labelLastName; break;
+	        case EMAIL: targetElement = labelEmail; break;
+	        case TELEPHONE: targetElement = labelTelephone; break;
+	        case PASSWORD: targetElement = labelPassword; break;
+	        case PASSWORD_CONFIRM: targetElement = labelConfPassword; break;
+	        default: throw new IllegalArgumentException("Trường không tồn tại");
+	    }
+
+	    return getPseudoElementProperty(targetElement, "::before", property);
+	}
+	
+	public boolean isRequiredField(RegisterField field) {
+		String content = getPseudoEle(field, "content");
+		String color = getPseudoEle(field, "color");
+		
+		return content.contains("*") && color.contains("255, 0, 0");
+	}
+	
+	public String getPrivacyPolicyText() {
+		return getText(privacyPolicyText, "I have read and agree to the Privacy Policy");
+	}
+	
+	public boolean isSelectedPolicy() {
+		return isElementSelected(chkbPolicy, "Privacy Policy");
+	}
+	
+	public boolean hidePasswordAndConfPassword() {
+		String typePwd = getAttribute(txtPassword, "Ô nhập liệu Password", "type");
+		String typeConfPwd = getAttribute(txtConfirmPassword, "Ô nhập liệu Password Confirm", "type");
+		
+		return typePwd.equals("password") && typeConfPwd.equals("password");
+	}
+	
+	public List<String> getBreadcrumbCorrect() {
+		List<WebElement> eles = getElements(listBreadCrumb, "Breadcrumb");
+		
+		return eles.stream().map(e -> e.getText().trim()).filter(s -> !s.isEmpty()).collect(Collectors.toList());
+	}
+	
+	public String getUrl() {
+		wait.until(ExpectedConditions.urlContains("register"));
+		return driver.getCurrentUrl();
+	}
+	
+	public String getTitle() {
+		wait.until(ExpectedConditions.titleIs("Register Account"));
+		return driver.getTitle();
 	}
 }

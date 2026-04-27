@@ -8,14 +8,15 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.checkout.CheckoutPositiveTest">
+      <class name="testCases.register.RegisterUITest">
         <methods>
+          <include name="TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk"/>
           <include name="tearDown"/>
+          <include name="navigateRegisterPage"/>
           <include name="setup"/>
           <include name="resetPageState"/>
-          <include name="TC_CO_006_Checkout_RegUser_NewBillingMandatory"/>
         </methods>
-      </class> <!-- testCases.checkout.CheckoutPositiveTest -->
+      </class> <!-- testCases.register.RegisterUITest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

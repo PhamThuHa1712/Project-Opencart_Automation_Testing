@@ -1,0 +1,36 @@
+02:50:46.803 [main] INFO  testCases.register.RegisterUITest - ***** Kết thúc TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks *****
+02:50:47.397 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+02:50:47.642 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+02:50:47.644 [main] INFO  testCases.register.RegisterUITest - ***** Bắt đầu TC_RF_013_verifyFieldPlaceholders *****
+02:50:47.677 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô nhập liệu FirstName] là: 'First Name'
+02:50:47.702 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô nhập liệu LastName] là: 'Last Name'
+02:50:47.726 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô nhập liệu Email] là: 'E-Mail'
+02:50:47.751 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô nhập liệu Telephone] là: 'Telephone'
+02:50:47.776 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô nhập liệu Password] là: 'Password'
+02:50:47.811 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [placeholder] từ [Ô nhập liệu Confirm Password] là: 'Password Confirm'
+02:50:47.812 [main] INFO  testCases.register.RegisterUITest - ***** Kết thúc TC_RF_013_verifyFieldPlaceholders *****
+02:50:48.352 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+02:50:48.577 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+02:50:48.579 [main] INFO  testCases.register.RegisterUITest - ***** Bắt đầu TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk *****
+02:50:48.882 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [I have read and agree to the Privacy Policy] là: 'I have read and agree to the Privacy Policy'
+02:50:49.523 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+02:50:49.773 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
+02:50:49.776 [main] INFO  testCases.register.RegisterUITest - ***** Bắt đầu TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed *****
+02:50:50.114 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '   Ronda   ' vào [Trường First Name]
+02:50:50.237 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '   Vandervort   ' vào [Trường Last Name]
+02:50:50.340 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '   denese.gaylord@gmail.com   ' vào [Trường Email]
+02:50:50.425 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '   599.270.4838   ' vào [Trường Telephone]
+02:50:50.500 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '   3kd58gycm   ' vào [Trường Password]
+02:50:50.577 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '   3kd58gycm   ' vào [Trường ConfirmPassword]
+02:50:50.658 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Lựa chọn Yes trong NewsLetter]
+02:50:50.728 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Trường check Privacy Policy]
+02:50:50.803 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã click vào [Nút Continue]
+02:50:53.351 [main] INFO  pageObjects.AccountSuccessPage - Thành công: Đã click vào [Nút Continue]
+02:50:53.610 [main] INFO  pageObjects.MyAccountPage - Thành công: Đã click vào [Edit Account]
+02:50:53.648 [main] INFO  pageObjects.MyAccountInformationPage - Thành công: Đã lấy được attribute [value] từ [FirstName trong trang My Account Information] là: 'Ronda'
+02:50:53.671 [main] INFO  pageObjects.MyAccountInformationPage - Thành công: Đã lấy được attribute [value] từ [LastName trong trang My Account Information] là: 'Vandervort'
+02:50:53.695 [main] INFO  pageObjects.MyAccountInformationPage - Thành công: Đã lấy được attribute [value] từ [Email trong trang My Account Information] là: 'denese.gaylord@gmail.com'
+02:50:53.720 [main] INFO  pageObjects.MyAccountInformationPage - Thành công: Đã lấy được attribute [value] từ [Telephone trong trang My Account Information] là: '599.270.4838'
+02:50:53.720 [main] INFO  testCases.register.RegisterUITest - ***** Kết thúc TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed *****
+02:50:54.224 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
+02:50:54.479 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]

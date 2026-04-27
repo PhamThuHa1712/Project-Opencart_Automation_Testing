@@ -1,7 +1,5 @@
 package testCases.register;
 
-import static org.testng.Assert.assertFalse;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -9,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import models.RegisterData;
 import pageObjects.AccountRegistrationPage;
-import pageObjects.AccountSuccessPage;
+import pageObjects.AccountRegistrationPage.RegisterField;
 import pageObjects.HomePage;
 import testBase.BaseClass;
 import utilities.DataProviders;
@@ -49,7 +47,6 @@ public class RegisterValidationTest extends BaseClass {
 	public void TC_RF_010_EmailValidation(String caseName, String email, String expectedMessage) {
 		logger.info("***** Bắt đầu TC_RF_010_EmailValidation *****");
 		
-		SoftAssert softAssert = new SoftAssert();
 		RegisterData data = TestDataFactory.validData();
 		data.setEmail(email);
 		
@@ -57,8 +54,7 @@ public class RegisterValidationTest extends BaseClass {
 		JavaScriptHelper.disableHTML5Validation(driver);
 		regpage.clickContinueFail();
 		
-		softAssert.assertEquals(regpage.displayMsgEmail(), expectedMessage, "[" + caseName + "] thông báo email sai định dạng không khớp!");
-		softAssert.assertAll();
+		Assert.assertEquals(regpage.displayMsgEmail(), expectedMessage, "[" + caseName + "] thông báo email sai định dạng không khớp!");
 		
 		logger.info("***** Kết thúc TC_RF_010_EmailValidation *****");
 	}
@@ -95,27 +91,61 @@ public class RegisterValidationTest extends BaseClass {
 	@Test(dataProvider="phoneValidationData", dataProviderClass = DataProviders.class)
 	public void TC_RF_011_verifyWarningForInvalidPhoneNumber(String caseName, String phone, String expectedMessage) {
 		logger.info("***** Bắt đầu TC_RF_011_verifyWarningForInvalidPhoneNumber *****");
-		
-		SoftAssert softAssert = new SoftAssert();
-		
+				
 		RegisterData data = TestDataFactory.validData();
 		data.setPhone(phone);
 		
 		regpage.fillRegisterForm(data).clickContinueFail();
 		
-		boolean isDisplayed = regpage.isPhoneErrorDisplayed();
+		boolean isSuccess = regpage.waitForResponseFor(RegisterField.TELEPHONE);
 
-	    // Nếu phoneNumber là loại đúng độ dài nhưng sai định dạng 
-	    // Mà isDisplayed lại là false -> Website đang thiếu tính năng validate định dạng
-	    softAssert.assertTrue(isDisplayed, 
-	        "[BUG][Phone][" + caseName + "] Website không validate định dạng số điện thoại (Dữ liệu nhập: " + phone + ")");
-	    
-	    if(isDisplayed) {
-	    		softAssert.assertEquals(regpage.displayMsgPhone(), expectedMessage, "Thông báo sai định dạng số điện thoại không khớp!");
+	    if(isSuccess) {
+	    		Assert.fail("Website không validate định dạng số điện thoại (Dữ liệu nhập: " + phone + ")");
+	    } else {
+	    		Assert.assertEquals(regpage.displayMsgPhone(), expectedMessage, "Thông báo lỗi trường Telephone không khớp");
 	    }
-	    	softAssert.assertAll();
-		
+	    
 		logger.info("***** Kết thúc TC_RF_011_verifyWarningForInvalidPhoneNumber *****");
+	}
+	
+	@Test
+	public void TC_RF_016_verifyWarningWhenEnteringOnlySpaces() {
+		logger.info("***** Bắt đầu TC_RF_016_verifyWarningWhenEnteringOnlySpaces *****");
+		
+		RegisterData data = TestDataFactory.multipleSpaceData(5);
+		regpage.fillRegisterForm(data).clickContinueFail();
+		
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(regpage.displayMsgFirstName(), "First Name must be between 1 and 32 characters!", "Thông báo lỗi First Name không hiển thị");
+		softAssert.assertEquals(regpage.displayMsgLastName(), "Last Name must be between 1 and 32 characters!", "Thông báo lỗi Last Name không hiển thị");
+		softAssert.assertEquals(regpage.displayMsgEmail(), "E-Mail Address does not appear to be valid!", "Thông báo lỗi Email không hiển thị");
+		softAssert.assertEquals(regpage.displayMsgPhone(), "Telephone must be between 3 and 32 characters!", "Thông báo lỗi Telephone không hiển thị");
+		softAssert.assertEquals(regpage.displayMsgPassword(), "Password must be between 4 and 20 characters!", "Thông báo lỗi Password không hiển thị");
+		softAssert.assertEquals(regpage.displayMsgPolicy(), "Warning: You must agree to the Privacy Policy!", "Thông báo lỗi Privacy Policy không hiển thị");
+		
+		softAssert.assertAll();
+		
+		logger.info("***** Kết thúc TC_RF_016_verifyWarningWhenEnteringOnlySpaces  *****");
+	}
+	
+	@Test(dataProvider="passwordValidationData", dataProviderClass=DataProviders.class)
+	public void TC_RF_017_verifyPasswordComplexityStandards(String caseName, String pwd, String expectedMessage) {
+        logger.info("***** Bắt đầu TC_RF_017_verifyPasswordComplexityStandards *****");
+                
+        RegisterData data = TestDataFactory.validData();
+        data.setPassword(pwd);
+        data.setConfirmPassword(pwd);
+        regpage.fillRegisterForm(data).clickContinueFail();
+        
+		boolean isSuccess = regpage.waitForResponseFor(RegisterField.PASSWORD);
+
+		if(isSuccess) {
+        		Assert.fail("Hệ thống cho phép đăng ký với " + caseName);
+        } else {
+        		Assert.assertEquals(regpage.displayMsgPassword(), expectedMessage, "Thông báo lỗi trường Password không khớp");
+        }
+        
+        logger.info("***** Kết thúc TC_RF_017_verifyPasswordComplexityStandards *****");
 	}
 	
 	@Test(groups = {"Master"}, description = "Kiểm tra validate trường Privacy Policy")
