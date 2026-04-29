@@ -1,22 +1,45 @@
-02:50:54.481 [main] INFO  testCases.register.RegisterUITest - ***** Bắt đầu TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault *****
-02:50:54.511 [main] INFO  pageObjects.AccountRegistrationPage - Kiểm tra trạng thái hiển thị của [Privacy Policy]: Đang được chọn.false
-02:50:54.511 [main] INFO  testCases.register.RegisterUITest - ***** Kết thúc TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault *****
-02:50:54.991 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
-02:50:55.264 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
-02:50:55.265 [main] INFO  testCases.register.RegisterUITest - ***** Bắt đầu TC_RF_022_verifyPasswordCharactersAreMasked *****
-02:50:55.344 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '123456' vào [Trường Password]
-02:50:55.420 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã nhập giá trị '123456' vào [Trường ConfirmPassword]
-02:50:55.443 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [type] từ [Ô nhập liệu Password] là: 'password'
-02:50:55.463 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được attribute [type] từ [Ô nhập liệu Password Confirm] là: 'password'
-02:50:55.463 [main] INFO  testCases.register.RegisterUITest - ***** Kết thúc TC_RF_022_verifyPasswordCharactersAreMasked *****
-02:50:56.060 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
-02:50:56.382 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
-02:50:56.384 [main] INFO  testCases.register.RegisterUITest - ***** Bắt đầu TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb *****
-02:50:56.400 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã tìm thấy 3 phần tử của [Breadcrumb]
-02:50:56.452 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Trang đăng ký] là: 'Register Account'
-02:50:56.470 [main] INFO  testCases.register.RegisterUITest - ***** Kết thúc TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb *****
-02:50:56.949 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [My Account]
-02:50:57.247 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Register]
-02:50:57.249 [main] INFO  testCases.register.RegisterUITest - ***** Bắt đầu TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments *****
-02:50:57.273 [main] INFO  pageObjects.AccountRegistrationPage - Thành công: Đã lấy được text từ [Trang đăng ký] là: 'Register Account'
-02:50:57.274 [main] INFO  testCases.register.RegisterUITest - ***** Kết thúc TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments *****
+03:51:30.171 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã tìm thấy 1 phần tử của [Các hàng của bảng]
+03:51:30.245 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được attribute [value] từ [Số lượng] là: '1'
+03:51:30.306 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Giá sản phẩm] là: '$122.00'
+03:51:30.363 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Tổng tiền] là: '$122.00'
+03:51:30.380 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã tìm thấy 1 phần tử của [Các hàng của bảng]
+03:51:30.400 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã tìm thấy 6 phần tử của [Các cột của bảng]
+03:51:30.455 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 2] là: 'iMac'
+03:51:30.502 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 3] là: 'Product 14'
+03:51:30.548 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được attribute [value] từ [Hàng 1Cột 4] là: '1'
+03:51:30.588 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 5] là: '$122.00'
+03:51:30.633 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 6] là: '$122.00'
+03:51:31.275 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã click vào [Nút Checkout]
+03:51:31.326 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Tiêu đề Checkout]: Đang hiển thị.
+03:51:32.035 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Guest Checkout]
+03:51:32.243 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Continue in New Customer]
+03:51:32.836 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [class] từ [Section Billing Detail] là: 'panel-collapse collapse in'
+03:51:32.921 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [aria-expanded] từ [Section Billing Detail] là: 'true'
+03:51:33.023 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [My delivery and billing addresses are the same.]: Đang được chọn.true
+03:51:33.622 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Shayna' vào [First Name]
+03:51:33.801 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Powlowski' vào [Last Name]
+03:51:34.002 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'cary.roberts@gmail.com' vào [Email]
+03:51:34.180 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị '(534) 306-3020' vào [Telephone]
+03:51:34.374 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'zx7xu0hz8i5rgb' vào [Password]
+03:51:34.681 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'zx7xu0hz8i5rgb' vào [Password Confirm]
+03:51:34.893 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Douglas, Hamill and Greenholt' vào [Company]
+03:51:35.110 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam' vào [Address1]
+03:51:35.372 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam' vào [Address2]
+03:51:35.553 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'Hà Nội' vào [City]
+03:51:35.722 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị '014286' vào [Post Code]
+03:51:35.758 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy phần tử Country
+03:51:36.103 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy phần tử Region/state
+03:51:36.421 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Policy Privacy]
+03:51:36.578 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Continue-Register]
+03:51:38.746 [main] ERROR pageObjects.CheckoutPage - Lỗi: Không tìm thấy attribute tại [Section Delivery Method]. Chi tiết: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token '<', "<b>Warning"... is not valid JSON
+OK
+<b>Warning</b>: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in <b>C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php</b> on line <b>83</b>[]}
+  (Session info: chrome=147.0.7727.119): SyntaxError: Unexpected token '<', "<b>Warning"... is not valid JSON
+OK
+<b>Warning</b>: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in <b>C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php</b> on line <b>83</b>[]
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d385f4a6414ef6c5600b6d6c6967080, findElement {using=css selector, value=#collapse-shipping-method}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.119, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56032}, goog:processID: 25280, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56032/devtoo..., se:cdpVersion: 147.0.7727.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d385f4a6414ef6c5600b6d6c6967080

@@ -13,6 +13,14 @@
                     <include name="TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments"/>
                 </methods>
             </class>
+            
+            <class name="testCases.login.LoginSystemTest">
+                <methods>
+                    <include name="TC_LF_023_SupportedEnvironments"/>
+                </methods>
+            </class>
+            
+            <class name="testCases.addToCart.AddToCartSystemTest"/>
         </classes>
     </test>
 
@@ -25,6 +33,13 @@
                     <include name="TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments"/>
                 </methods>
             </class>
+            
+            <class name="testCases.login.LoginSystemTest">
+                <methods>
+                    <include name="TC_LF_023_SupportedEnvironments"/>
+                </methods>
+            </class>
+            <class name="testCases.addToCart.AddToCartSystemTest"/>
         </classes>
     </test>
 </suite> 

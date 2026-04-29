@@ -16,7 +16,7 @@ import utilities.TestDataFactory;
 public class AddToCartPositiveTest extends BaseClass {
 	private ResourceBundle rb = TestDataFactory.rb;
 	
-	/*
+	
 	@Test
 	public void TC_ATC_001_AddToCart_ProductDisplayPage() {
 		logger.info("***** Kết thúc TC_ATC_001_AddToCart_ProductDisplayPage *****");
@@ -78,7 +78,7 @@ public class AddToCartPositiveTest extends BaseClass {
 		logger.info("***** Kết thúc TC_ATC_004_AddToCart_RelatedProducts *****");
 
 	}
-	*/
+	
 	
 	@Test
 	public void TC_ATC_005_AddToCart_CategoryPage() {
@@ -97,4 +97,33 @@ public class AddToCartPositiveTest extends BaseClass {
 		logger.info("***** Kết thúc TC_ATC_005_AddToCart_CategoryPage *****");
 	}
 	
+	
+	@Test
+	public void TC_ATC_006_AddToCart_FeaturedSection() {
+		logger.info("***** Bắt đầu TC_ATC_006_AddToCart_FeaturedSection *****");
+		
+		HomePage hp = new HomePage(driver);
+		String productName = hp.getProductName();
+		hp.clickAddToCart();
+		Assert.assertEquals(hp.getMsgAddToCartSuccess(), "Success: You have added " + productName + " to your shopping cart!", "Thông báo thêm sản phẩm vào giỏ hàng thành công không hiển thị");
+		boolean dis = hp.clickLnkShoppingCart().presenceOfElement(productName);
+		Assert.assertTrue(dis, "Sản phẩm không hiển thị trong giỏ hàng");
+		
+		logger.info("***** Kết thúc TC_ATC_006_AddToCart_FeaturedSection *****");
+	}
+	
+	
+	@Test
+	public void TC_ATC_007_AddToCart_ComparisonPage() {
+		logger.info("***** Bắt đầu TC_ATC_007_AddToCart_ComparisonPage *****");
+		
+		HomePage hp = new HomePage(driver);
+		String productName = hp.getProductName();
+		hp.clickCompareProduct();
+		Assert.assertEquals(hp.getMsgAddProductComparisonSuccess(), "Success: You have added " + productName + " to your product comparison!", "Thông báo thêm sản phẩm so sánh thành công không chính xác");
+		boolean dis = hp.clickLnkProductComparison().clickAddToCart().clickLnkShoppingCart().presenceOfElement(productName);
+		Assert.assertTrue(dis, "Sản phẩm không hiển thị trong giỏ hàng"); 
+		
+		logger.info("***** Kết thúc TC_ATC_007_AddToCart_ComparisonPage *****");
+	}
 }

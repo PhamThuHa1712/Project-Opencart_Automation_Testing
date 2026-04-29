@@ -27,4 +27,9 @@ public class AccountLogoutPage extends BasePage {
 		click(lnkLogin, "Login");
 		return new LoginPage(driver);
 	}
+	
+	public LoginPage clickBrowserBack() {
+		driver.navigate().back();
+		return new LoginPage(driver);
+	}
 }

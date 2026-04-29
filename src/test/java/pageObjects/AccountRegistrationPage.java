@@ -75,6 +75,8 @@ public class AccountRegistrationPage extends BasePage{
 	
 	private final By listBreadCrumb = By.cssSelector(".breadcrumb li");
 	
+	private final By lnkLoginPage = By.cssSelector("div[id='content'] p a");
+	
 	public enum RegisterField {
 	    TELEPHONE, PASSWORD, EMAIL, FIRSTNAME, LASTNAME, PASSWORD_CONFIRM
 	}
@@ -169,6 +171,10 @@ public class AccountRegistrationPage extends BasePage{
 		return this;
 	}
 	
+	public LoginPage clickLnkLoginPage() {
+		click(lnkLoginPage, "Link Login Page");
+		return new LoginPage(driver);
+	}
 	
 	public AccountSuccessPage fillRegistrationFormByKeyboard(RegisterData data) {
 		tabUntilElementFound("firstname", 30, "Trường First Name");

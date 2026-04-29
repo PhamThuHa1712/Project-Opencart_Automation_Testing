@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
 import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
@@ -252,5 +254,34 @@ public class BasePage {
     		
     		JavascriptExecutor js = (JavascriptExecutor) driver;
     		return (String) js.executeScript("return window.getComputedStyle(arguments[0], arguments[1]).getPropertyValue(arguments[2]);", ele, pseudoElement, property);
+    }
+    
+    public void copyByShortCut(By locator, String elementName) {
+    		try {
+    			wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
+    			
+    			Actions act = new Actions(driver);
+    			act.keyDown(Keys.CONTROL)
+    				.sendKeys("a")
+    				.sendKeys("c")
+    				.keyUp(Keys.CONTROL).perform();
+    			logger.info("Thành công: Đã copy text từ [" + elementName + "]");
+
+    	    } catch (Exception e) {
+    	        logger.error("Lỗi: Không thể copy từ [" + elementName + "]. Chi tiết: " + e);
+    	        throw new RuntimeException("Test dừng do lỗi copy: " + elementName, e);
+    	    }
+    }
+    
+    public String getClipboardText(String actionName) {
+    		try {
+    			String clipboardText = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+    			logger.info("Thành công: Đã lấy dữ liệu clipboard sau [" + actionName + "]: " + clipboardText);
+
+    	        return clipboardText;
+    		} catch(Exception e) {
+    			logger.error("Lỗi: Không thể lấy dữ liệu clipboard sau [" + actionName + "]. Chi tiết: " + e);
+    	        throw new RuntimeException("Test dừng do không lấy được clipboard sau: " + actionName, e);
+    		}
     }
 }

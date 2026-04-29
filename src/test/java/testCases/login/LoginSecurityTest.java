@@ -34,6 +34,18 @@ public class LoginSecurityTest extends BaseClass {
 		logger.info("***** Kết thúc TC_LF_013_PasswordVisibilityToggled *****");
 	}
 	
+	@Test
+	public void TC_LF_014_verifyPasswordCopyIsBlocked() {
+		logger.info("***** Bắt đầu TC_LF_014_verifyPasswordCopyIsBlocked *****");
+		
+		String password = randomAlphaNumberic();
+		
+		String copiedPwd = lp.typePassword(password).copyPasswordByShortcut().getClipboardText("copy password");
+		
+		Assert.assertNotEquals(copiedPwd, password, "Hệ thống không ngăn chặn copy dữ liệu trường Password thông qua Ctrl + c");
+		
+		logger.info("***** Kết thúc TC_LF_014_verifyPasswordCopyIsBlocked *****");
+	}
 	
 	@Test
 	public void TC_LF_015_PasswordNotVisibleInPageSource() {
@@ -65,6 +77,4 @@ public class LoginSecurityTest extends BaseClass {
 		
 		logger.info("***** Kết thúc TC_LF_018_LoginSessionTimeout *****");
 	}
-	
-	
 }

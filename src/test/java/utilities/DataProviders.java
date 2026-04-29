@@ -58,12 +58,19 @@ public class DataProviders {
 	public Object[][] passwordValidationData() {
 		return new Object[][] {
 			{"Độ dài mật khẩu không đủ 4 ký tự", "Ab@", "Password must be between 4 and 20 characters!"},
+			
 			{"Độ dài mật khẩu vượt quá 20 ký tự", "Test@1234567890LongPassword!!", "Password must be between 4 and 20 characters!"},
+			
 			{"Mật khẩu không chứa chữ hoa", "abc@1234", "Password must be between 4 and 20 characters!"},
+			
 			{"Mật khẩu không chứa chữ thường", "ABC@1234", "Password must be between 4 and 20 characters!"},
-			{"Mật khẩu thiếu chữ số", "Abc@defg", "Password must be between 4 and 20 characters!"}, 
+			
+			{"Mật khẩu thiếu chữ số", "Abc@defg", "Password must be between 4 and 20 characters!"},
+			
 			{"Mật khẩu thiếu ký tự đặc biệt", "Abc12345", "Password must be between 4 and 20 characters!"},
+			
 			{"Mật khẩu chứa dấu cách", "Abc 1234@", "Password must be between 4 and 20 characters!"},
+			
 			{"Mật khẩu chứa ký tự lạ", "Abc@1234<", "Password must be between 4 and 20 characters!"}
 		};
 	}
@@ -73,8 +80,11 @@ public class DataProviders {
 	public Object[][] loginValidationData() {
 		return new Object[][] {
 			{"TC_LF_002_LoginWithInvalidCredentials", "wrong_email@gmail.com", "wrong_pass", "Warning: No match for E-Mail Address and/or Password."},
+			
 			{"TC_LF_003_LoginWithInvalidEmailValidPassword", "wrong_email@gmail.com", rb.getString("password"), "Warning: No match for E-Mail Address and/or Password."},
+			
 			{"TC_LF_004_LoginWithValidEmailInvalidPassword", "hathuha@gmail.com", "wrong_pass", "Warning: No match for E-Mail Address and/or Password."},
+			
 			{"TC_LF_005_LoginWithoutCredentials", "", "", "Warning: No match for E-Mail Address and/or Password."}
 		};
 	}

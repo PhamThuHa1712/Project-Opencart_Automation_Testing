@@ -2,6 +2,7 @@ package pageObjects;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import models.CheckoutData;
+import models.GuestCheckoutData;
+import models.RegisterCheckoutData;
 
 public class CheckoutPage extends BasePage {
 	
@@ -104,6 +107,46 @@ public class CheckoutPage extends BasePage {
 	private final By msgValidationPostcodeBilling = By.xpath("//input[@name='postcode']//following-sibling::div[@class='text-danger']");
 	
 	private final By msgValidationRegionStateBilling = By.xpath("//select[@id='input-payment-zone']//following-sibling::div[@class='text-danger']");
+	
+	private final By txtCommentInDeliveryMethod = By.cssSelector("div[id='collapse-shipping-method'] textarea[name='comment']");
+	
+	private final By txtCommentInPaymentMethod = By.cssSelector("div[id='collapse-payment-method'] textarea[name='comment']");
+	
+	private final By guestCheckout = By.cssSelector("input[value='guest']");
+	
+	private final By btnCtnNewCustomer = By.cssSelector("#button-account");
+	
+	private final By sectionBillingDetails = By.cssSelector("#collapse-payment-address");
+	
+	private final By sameDeliveryAndBillingAddress = By.cssSelector("input[value='1'][name='shipping_address']");
+	
+	private final By txtEmailBilling = By.cssSelector("#input-payment-email");
+	
+	private final By txtTelephoneBilling = By.cssSelector("#input-payment-telephone");
+	
+	private final By sectionDeliveryMethod = By.cssSelector("#collapse-shipping-method");
+	
+	private final By sectionPaymentMethod = By.cssSelector("#collapse-payment-method");
+	
+	private final By sectionConfirmOrder = By.cssSelector("#collapse-checkout-confirm");
+	
+	private final By registerAccount = By.cssSelector("input[value='register']");
+	
+	private final By txtEmailLogin = By.cssSelector("#input-email");
+	
+	private final By txtPasswordLogin = By.cssSelector("#input-password");
+	
+	private final By btnLogin = By.cssSelector("#button-login");
+	
+	private final By txtPasswordBilling = By.cssSelector("#input-payment-password");
+	
+	private final By txtPasswordConfirmBilling = By.cssSelector("#input-payment-confirm");
+	
+	private final By btnGuestBillingCtn = By.cssSelector("#button-guest");
+	
+	private final By btnRegisterBillingCtn = By.cssSelector("#button-register");
+			
+	private final By checkboxPolicy = By.cssSelector("input[value='1'][name='agree']");
 	
 	public boolean isDisplayCheckoutPage() {
 		return isElementDisplayed(titleCheckout, "Tiêu đề Checkout");
@@ -254,7 +297,7 @@ public class CheckoutPage extends BasePage {
 		
 		WebElement region_State = getElement(regionStateBilling, "Region/state");
 		Select selectRegionState = new Select(region_State); 
-		selectRegionState.selectByVisibleText(data.getRegion_state());
+		selectRegionState.selectByVisibleText(data.getRegionState());
 		
 		return this;
 	}
@@ -281,7 +324,7 @@ public class CheckoutPage extends BasePage {
 		
 		WebElement region_State = getElement(regionStateDelivery, "Region/state");
 		Select selectRegionState = new Select(region_State); 
-		selectCountry.selectByVisibleText(data.getCity());
+		selectRegionState.selectByVisibleText(data.getRegionState());
 		
 		return this;
 	}
@@ -343,4 +386,182 @@ public class CheckoutPage extends BasePage {
 		return getAttribute(companyBilling, "Ô Company", "placeholder");
 	}
 
+	public CheckoutPage selectNewAddressDelivery() {
+		click(newAddressDelivery, "I want to use a new address");
+		return this;
+	}
+	
+	// ko kiểm tra isDisplayed cho từng trường mà dùng hàm để lấy ra các trường ko hiển thị để viết ít softAssert mà vẫn lấy được ptu ko hiển thị
+	public Map<By, String> getBillingFields() {
+		return Map.of(
+				firstNameBilling, "First Name",
+				lastNameBilling, "Last Name",
+				companyBilling, "Company",
+				address1Billing, "Address 1",
+				address2Billing, "Address 2",
+				cityBilling, "City",
+				postCodeBilling, "Post code",
+				countryBilling, "Country",
+				regionStateBilling, "Region / State"
+				);
+	}
+	
+	public Map<By, String> getDeliveryFields() {
+	    return Map.of(
+	        firstNameDelivery, "First Name",
+	        lastNameDelivery, "Last Name",
+	        companyDelivery, "Company",
+	        address1Delivery, "Address 1",
+	        address2Delivery, "Address 2",
+	        cityDelivery, "City",
+	        postCodeDelivery, "Post code",
+	        countryDelivery, "Country",
+	        regionStateDelivery, "Region / State"
+	    );
+	}
+
+	public List<String> getMissingFields(Map<By, String> map) {
+		List<String> list = new ArrayList<>();
+		
+		for(Map.Entry<By, String> entry : map.entrySet()) {
+			if(!isElementDisplayed(entry.getKey(), entry.getValue())) {
+				list.add(entry.getValue());
+			}
+		}
+		return list;
+	}
+	
+	public List<String> missingBillingFields(){
+		return getMissingFields(getBillingFields());
+	}
+	
+	public List<String> missingDeliveryFields(){
+		return getMissingFields(getDeliveryFields());
+	}
+
+	public CheckoutPage typeCmtDeliveryMethod(String text) {
+		type(txtCommentInDeliveryMethod, text, "Ô bình luận trong Delivery Method");
+		return this;
+	}
+	
+	public CheckoutPage typeCmtPaymentMethod(String text) {
+		type(txtCommentInPaymentMethod, text, "Ô bình luận trong Payment Method");
+		return this;
+	}
+	
+	public String getCmtPaymentMethod() {
+		return getText(txtCommentInPaymentMethod, "Ô bình luận trong Payment Method");
+	}
+	
+	public CheckoutPage selectedGuestCheckout() {
+		click(guestCheckout, "Guest Checkout");
+		return this;
+	}
+	
+	public CheckoutPage selectedRegisterCheckout() {
+		click(registerAccount, "Guest Checkout");
+		return this;
+	}
+	
+	public CheckoutPage clickCntNewCustomer() {
+		click(btnCtnNewCustomer, "Continue in New Customer");
+		return this;
+	}
+	
+	public boolean isBillingDetails() {
+		return getAttribute(sectionBillingDetails, "Section Billing Detail", "class").contains("in") && 
+	           getAttribute(sectionBillingDetails, "Section Billing Detail", "aria-expanded").equals("true");
+	}
+	
+	public boolean selectedSameDeliveryAndBillingAddress() {
+		return isElementSelected(sameDeliveryAndBillingAddress, "My delivery and billing addresses are the same.");
+	}
+	
+	public CheckoutPage fillBillingDetailGuestCheckout(GuestCheckoutData data) {
+		type(firstNameBilling, data.getFirstName(), "First Name");
+		type(lastNameBilling, data.getLastName(), "Last Name");
+		type(txtEmailBilling, data.getEmail(), "Email");
+		type(txtTelephoneBilling, data.getTelephone(), "Telephone");
+		type(companyBilling, data.getCompany(), "Company");
+		type(address1Billing, data.getAddress1(), "Address1");
+		type(address2Billing, data.getAddress2(), "Address2");
+		type(cityBilling, data.getCity(), "City");
+		type(postCodeBilling, data.getPostCode(), "Post Code");
+		WebElement country = getElement(countryBilling, "Country");
+		
+		Select selectCountry = new Select(country); 
+		selectCountry.selectByVisibleText(data.getCountry());
+		
+		wait.until(d -> {
+	        WebElement regionEle = d.findElement(regionStateBilling);
+	        Select selectRegion = new Select(regionEle);
+	        return selectRegion.getOptions().size() > 1; 
+	    });
+		
+		WebElement region_State = getElement(regionStateBilling, "Region/state");
+		Select selectRegionState = new Select(region_State); 
+		selectRegionState.selectByVisibleText(data.getRegionState());
+		
+		return this;
+	}
+	
+	public CheckoutPage fillBillingDetailRegisterCheckout(RegisterCheckoutData data) {
+		type(firstNameBilling, data.getFirstName(), "First Name");
+		type(lastNameBilling, data.getLastName(), "Last Name");
+		type(txtEmailBilling, data.getEmail(), "Email");
+		type(txtTelephoneBilling, data.getTelephone(), "Telephone");
+		type(txtPasswordBilling, data.getPassword(), "Password");
+		type(txtPasswordConfirmBilling, data.getPasswordConfirm(), "Password Confirm");
+		type(companyBilling, data.getCompany(), "Company");
+		type(address1Billing, data.getAddress1(), "Address1");
+		type(address2Billing, data.getAddress2(), "Address2");
+		type(cityBilling, data.getCity(), "City");
+		type(postCodeBilling, data.getPostCode(), "Post Code");
+		WebElement country = getElement(countryBilling, "Country");
+		
+		Select selectCountry = new Select(country); 
+		selectCountry.selectByVisibleText(data.getCountry());
+		
+		wait.until(d -> {
+	        WebElement regionEle = d.findElement(regionStateBilling);
+	        Select selectRegion = new Select(regionEle);
+	        return selectRegion.getOptions().size() > 1; 
+	    });
+		
+		WebElement region_State = getElement(regionStateBilling, "Region/state");
+		Select selectRegionState = new Select(region_State); 
+		selectRegionState.selectByVisibleText(data.getRegionState());
+		
+		return this;
+	}
+	
+	public boolean isDeliveryMethod() {
+		return getAttribute(sectionDeliveryMethod, "Section Delivery Method", "class").contains("in") && 
+		       getAttribute(sectionDeliveryMethod, "Section Delivery Method", "aria-expanded").equals("true");
+	}
+	
+	public boolean isPaymentMethod() {
+		return getAttribute(sectionPaymentMethod, "Section Payment Method", "class").contains("in") && 
+		       getAttribute(sectionPaymentMethod, "Section Payment Method", "aria-expanded").equals("true");
+	}
+	
+	public boolean isConfirmOrder() {
+		return getAttribute(sectionConfirmOrder, "Section Confirm Order", "class").contains("in") && 
+		       getAttribute(sectionConfirmOrder, "Section Confirm Order", "aria-expanded").equals("true");
+	}
+	
+	public CheckoutPage clickGuestBillingCtn() {
+		click(btnGuestBillingCtn, "Continue-Guest");
+		return this;
+	}
+	
+	public CheckoutPage clickRegisterBillingCtn() {
+		click(btnRegisterBillingCtn, "Continue-Register");
+		return this;
+	}
+	
+	public CheckoutPage checkPolicy() {
+		click(checkboxPolicy, "Policy Privacy");
+		return this;
+	}
 }

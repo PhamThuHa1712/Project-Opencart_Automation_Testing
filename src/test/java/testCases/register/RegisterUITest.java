@@ -116,6 +116,13 @@ public class RegisterUITest extends BaseClass {
 		logger.info("***** Kết thúc TC_RF_022_verifyPasswordCharactersAreMasked *****");
 	}
 	
+	// Test việc điều hướng đến các trang tương ứng khi nhấn các link trên trang đăng kýy
+	@Test
+	public void TC_RF_023_verifyNavigationLinksOnRegisterPage() {
+		logger.info("***** Bắt đầu TC_RF_023_verifyNavigationLinksOnRegisterPage *****");
+
+		logger.info("***** Kết thúc TC_RF_023_verifyNavigationLinksOnRegisterPage *****");
+	}
 	
 	@Test
 	public void TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb() {

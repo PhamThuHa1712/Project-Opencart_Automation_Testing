@@ -2,12 +2,11 @@ package utilities;
 
 import java.util.ResourceBundle;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.github.javafaker.Faker;
 
 import models.CheckoutData;
+import models.GuestCheckoutData;
+import models.RegisterCheckoutData;
 import models.RegisterData;
 
 public class TestDataFactory {
@@ -68,8 +67,43 @@ public class TestDataFactory {
     				.city("Hà Nội")
     				.postCode(faker.number().digits(6))
     				.country("Viet Nam")
-    				.region_state("Ha Noi")
+    				.regionState("Ha Noi")
     				.build();
+    }
+    
+    public static GuestCheckoutData guestCheckoutData() {
+		return GuestCheckoutData.builder()
+				.firstName(faker.name().firstName())
+				.lastName(faker.name().lastName())
+				.email(faker.internet().emailAddress())
+				.telephone(faker.phoneNumber().cellPhone())
+				.company(faker.company().name())
+				.address1("Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam")
+				.address2("Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam")
+				.city("Hà Nội")
+				.postCode(faker.number().digits(6))
+				.country("Viet Nam")
+				.regionState("Ha Noi")
+				.build();
+    }
+    
+    public static RegisterCheckoutData registerCheckoutData() {
+    		String password = faker.internet().password();
+    		return RegisterCheckoutData.builder()
+				.firstName(faker.name().firstName())
+				.lastName(faker.name().lastName())
+				.email(faker.internet().emailAddress())
+				.telephone(faker.phoneNumber().cellPhone())
+				.password(password)
+				.passwordConfirm(password)
+				.company(faker.company().name())
+				.address1("Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam")
+				.address2("Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam")
+				.city("Hà Nội")
+				.postCode(faker.number().digits(6))
+				.country("Viet Nam")
+				.regionState("Ha Noi")
+				.build();
     }
     
     public static RegisterData leadingAndTrailingSpaceData() {

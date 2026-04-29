@@ -24,6 +24,8 @@ public class MyAccountPage extends BasePage {
 	
 	private final By lnkEditAccount = By.xpath("//a[normalize-space()='Edit Account']");
 	
+	private final By optionLogout = By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[contains(text(),'Logout')]");
+	
 	public MyAccountPage clickMyAcc() {
 		click(myAccount, "Dropdown My Account");
 		return this;
@@ -65,5 +67,15 @@ public class MyAccountPage extends BasePage {
 	public MyAccountInformationPage clickEditAccount() {
 		click(lnkEditAccount, "Edit Account");
 		return new MyAccountInformationPage(driver);
+	}
+	
+	public MyAccountPage clickBrowserBack() {
+		driver.navigate().back();
+		return this;
+	}
+	
+	public AccountLogoutPage clickOptionLogout() {
+		click(optionLogout, "Logout");
+		return new AccountLogoutPage(driver);
 	}
 }

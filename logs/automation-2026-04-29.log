@@ -1,0 +1,40 @@
+23:58:56.261 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Billing Details]
+23:58:56.837 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [I want to use an existing address in Delivary Details]: Đang được chọn.true
+23:58:56.890 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được text từ [Địa chỉ giao hàng trong mục Delivary Details] là: 'Randal Zemlak, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Pham Ha, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        abc def, Vân Đình - Hà Nội, Hà Nội, Ha Noi, Viet Nam
+                        abc def, Vân Đình - Hà Nội, Hà Nội, Ha Noi, Viet Nam
+                        Leo Armstrong, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Joesph Bradtke, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Pierre Beier, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Aldo Gerhold, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Tanner Auer, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Tony Parker, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Gonzalo Paucek, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Lauran Kozey, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Christal Runolfsson, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Yasuko Rolfson, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Fritz Bergstrom, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Hyman Paucek, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Tiffany Thiel, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Reda Zemlak, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Dayna Lubowitz, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Alfredo Spinka, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Aline Carter, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Eldon Grant, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Daron Robel, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Meda Turner, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Breanna Mohr, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Kassie Kihn, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam
+                        Jere Weissnat, Minh Khai - Bắc Từ Liêm - Hà Nội - Việt Nam, Hà Nội, Ha Noi, Viet Nam'
+23:58:57.029 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [I want to use a new address]
+23:58:57.055 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Address 2]: Đang hiển thị.
+23:58:57.079 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Last Name]: Đang hiển thị.
+23:58:57.103 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Address 1]: Đang hiển thị.
+23:58:57.125 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [First Name]: Đang hiển thị.
+23:58:57.148 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Post code]: Đang hiển thị.
+23:58:57.172 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Region / State]: Đang hiển thị.
+23:58:57.195 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [City]: Đang hiển thị.
+23:58:57.218 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Company]: Đang hiển thị.
+23:58:57.240 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Country]: Đang hiển thị.
+23:58:57.362 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [I want to use a new address (Delivery Detail]

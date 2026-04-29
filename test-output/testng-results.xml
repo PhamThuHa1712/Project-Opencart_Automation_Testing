@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-28T02:50:42 ICT" name="Suite" finished-at="2026-04-28T02:50:57 ICT" duration-ms="14805">
+  <suite started-at="2026-04-30T03:51:24 ICT" name="Suite" finished-at="2026-04-30T03:51:39 ICT" duration-ms="15200">
     <groups>
     </groups>
-    <test started-at="2026-04-28T02:50:42 ICT" name="Test" finished-at="2026-04-28T02:50:57 ICT" duration-ms="14805">
-      <class name="testCases.register.RegisterUITest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:42 ICT" name="setup" finished-at="2026-04-28T02:50:44 ICT" duration-ms="1263" status="PASS">
+    <test started-at="2026-04-30T03:51:24 ICT" name="Test" finished-at="2026-04-30T03:51:39 ICT" duration-ms="15200">
+      <class name="testCases.checkout.CheckoutPositiveTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:24 ICT" name="setup" finished-at="2026-04-30T03:51:26 ICT" duration-ms="2214" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,50 +23,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:44 ICT" name="resetPageState" finished-at="2026-04-28T02:50:45 ICT" duration-ms="929" status="PASS">
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:26 ICT" name="resetPageState" finished-at="2026-04-30T03:51:28 ICT" duration-ms="1393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:45 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:45 ICT" duration-ms="450" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:45 ICT" name="TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks" finished-at="2026-04-28T02:50:46 ICT" duration-ms="1289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:46 ICT" name="resetPageState" finished-at="2026-04-28T02:50:47 ICT" duration-ms="466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:47 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:47 ICT" duration-ms="356" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_013_verifyFieldPlaceholders()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:47 ICT" name="TC_RF_013_verifyFieldPlaceholders" finished-at="2026-04-28T02:50:47 ICT" duration-ms="169" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_RF_013_verifyFieldPlaceholders -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:47 ICT" name="resetPageState" finished-at="2026-04-28T02:50:48 ICT" duration-ms="465" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:48 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:48 ICT" duration-ms="296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:48 ICT" name="TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk" finished-at="2026-04-28T02:50:48 ICT" duration-ms="307" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="TC_CO_017_Checkout_NewUserRegistration()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:28 ICT" name="TC_CO_017_Checkout_NewUserRegistration" finished-at="2026-04-30T03:51:38 ICT" duration-ms="10513" status="FAIL">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[The following asserts failed:
-Privacy Policy không có dấu * expected [true] but found [false]]]>
+              <![CDATA[Test dừng do không lấy được attribute từ: Section Delivery Method]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Privacy Policy không có dấu * expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at testCases.register.RegisterUITest.TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk(RegisterUITest.java:75)
+              <![CDATA[java.lang.RuntimeException: Test dừng do không lấy được attribute từ: Section Delivery Method
+at pageObjects.BasePage.getAttribute(BasePage.java:83)
+at pageObjects.CheckoutPage.isDeliveryMethod(CheckoutPage.java:539)
+at testCases.checkout.CheckoutPositiveTest.proceedToConfirmOrderForNewCustomer(CheckoutPositiveTest.java:109)
+at testCases.checkout.CheckoutPositiveTest.TC_CO_017_Checkout_NewUserRegistration(CheckoutPositiveTest.java:370)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -93,77 +64,44 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token '<', "<b>Warning"... is not valid JSON
+OK
+<b>Warning</b>: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in <b>C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php</b> on line <b>83</b>[]}
+  (Session info: chrome=147.0.7727.119): SyntaxError: Unexpected token '<', "<b>Warning"... is not valid JSON
+OK
+<b>Warning</b>: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in <b>C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php</b> on line <b>83</b>[]
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d385f4a6414ef6c5600b6d6c6967080, findElement {using=css selector, value=#collapse-shipping-method}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.119, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56032}, goog:processID: 25280, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56032/devtoo..., se:cdpVersion: 147.0.7727.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d385f4a6414ef6c5600b6d6c6967080
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:222)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:215)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+at pageObjects.BasePage.getAttribute(BasePage.java:77)
+... 29 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:49 ICT" name="resetPageState" finished-at="2026-04-28T02:50:49 ICT" duration-ms="439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:49 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:49 ICT" duration-ms="322" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:49 ICT" name="TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed" finished-at="2026-04-28T02:50:53 ICT" duration-ms="3946" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:53 ICT" name="resetPageState" finished-at="2026-04-28T02:50:54 ICT" duration-ms="435" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:54 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:54 ICT" duration-ms="322" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:54 ICT" name="TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault" finished-at="2026-04-28T02:50:54 ICT" duration-ms="31" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:54 ICT" name="resetPageState" finished-at="2026-04-28T02:50:54 ICT" duration-ms="414" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:54 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:55 ICT" duration-ms="337" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_022_verifyPasswordCharactersAreMasked()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:55 ICT" name="TC_RF_022_verifyPasswordCharactersAreMasked" finished-at="2026-04-28T02:50:55 ICT" duration-ms="199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_RF_022_verifyPasswordCharactersAreMasked -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:55 ICT" name="resetPageState" finished-at="2026-04-28T02:50:55 ICT" duration-ms="471" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:55 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:56 ICT" duration-ms="448" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:56 ICT" name="TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb" finished-at="2026-04-28T02:50:56 ICT" duration-ms="87" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:56 ICT" name="resetPageState" finished-at="2026-04-28T02:50:56 ICT" duration-ms="402" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- resetPageState -->
-        <test-method is-config="true" signature="navigateRegisterPage()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:56 ICT" name="navigateRegisterPage" finished-at="2026-04-28T02:50:57 ICT" duration-ms="373" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateRegisterPage -->
-        <test-method signature="TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:57 ICT" name="TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments" finished-at="2026-04-28T02:50:57 ICT" duration-ms="26" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.register.RegisterUITest@7862f56]" started-at="2026-04-28T02:50:57 ICT" name="tearDown" finished-at="2026-04-28T02:50:57 ICT" duration-ms="167" status="PASS">
+        </test-method> <!-- TC_CO_017_Checkout_NewUserRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:39 ICT" name="tearDown" finished-at="2026-04-30T03:51:39 ICT" duration-ms="382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.register.RegisterUITest -->
+      </class> <!-- testCases.checkout.CheckoutPositiveTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

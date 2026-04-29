@@ -71,4 +71,13 @@ public class LoginSystemTest extends BaseClass {
 	    
 	    logger.info("***** Kết thúc TC_LF_017_LoginClosingBrowserWithoutLoggingOut *****");
 	}
+	
+	@Test
+	public void TC_LF_023_SupportedEnvironments(){
+		logger.info("***** Bắt đầu TC_LF_023_SupportedEnvironments *****");
+		
+		Assert.assertTrue(lp.displayLoginPage(), "Trang đăng nhập không hoạt động trên trình duyệt hiện tại");
+		
+		logger.info("***** Kết thúc TC_LF_023_SupportedEnvironments *****");
+	}
 }

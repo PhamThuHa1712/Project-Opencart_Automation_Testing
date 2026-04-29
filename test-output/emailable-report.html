@@ -9,21 +9,43 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">14,805</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">15,200</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.register.RegisterUITest</td><td><a href="#m0">TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk</a></td><td rowspan="1">1777319448578</td><td rowspan="1">307</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">testCases.register.RegisterUITest</td><td><a href="#m1">TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks</a></td><td rowspan="1">1777319445519</td><td rowspan="1">1289</td></tr><tr class="passedeven"><td><a href="#m2">TC_RF_013_verifyFieldPlaceholders</a></td><td rowspan="1">1777319447643</td><td rowspan="1">169</td></tr><tr class="passedeven"><td><a href="#m3">TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed</a></td><td rowspan="1">1777319449774</td><td rowspan="1">3946</td></tr><tr class="passedeven"><td><a href="#m4">TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault</a></td><td rowspan="1">1777319454480</td><td rowspan="1">31</td></tr><tr class="passedeven"><td><a href="#m5">TC_RF_022_verifyPasswordCharactersAreMasked</a></td><td rowspan="1">1777319455264</td><td rowspan="1">199</td></tr><tr class="passedeven"><td><a href="#m6">TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb</a></td><td rowspan="1">1777319456383</td><td rowspan="1">87</td></tr><tr class="passedeven"><td><a href="#m7">TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments</a></td><td rowspan="1">1777319457248</td><td rowspan="1">26</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.checkout.CheckoutPositiveTest</td><td><a href="#m0">TC_CO_017_Checkout_NewUserRegistration</a></td><td rowspan="1">1777495888234</td><td rowspan="1">10513</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testCases.register.RegisterUITest#TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Privacy Policy không có dấu * expected [true] but found [false]
-	at testCases.register.RegisterUITest.TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk(RegisterUITest.java:75)
+<h2>Test</h2><h3 id="m0">testCases.checkout.CheckoutPositiveTest#TC_CO_017_Checkout_NewUserRegistration</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Test dừng do không lấy được attribute từ: Section Delivery Method
+	at pageObjects.BasePage.getAttribute(BasePage.java:83)
+	at pageObjects.CheckoutPage.isDeliveryMethod(CheckoutPage.java:539)
+	at testCases.checkout.CheckoutPositiveTest.proceedToConfirmOrderForNewCustomer(CheckoutPositiveTest.java:109)
+	at testCases.checkout.CheckoutPositiveTest.TC_CO_017_Checkout_NewUserRegistration(CheckoutPositiveTest.java:370)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.register.RegisterUITest#TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testCases.register.RegisterUITest#TC_RF_013_verifyFieldPlaceholders</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testCases.register.RegisterUITest#TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testCases.register.RegisterUITest#TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testCases.register.RegisterUITest#TC_RF_022_verifyPasswordCharactersAreMasked</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testCases.register.RegisterUITest#TC_RF_025_verifyPageTitleUrlHeadingAndBreadcrumb</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">testCases.register.RegisterUITest#TC_RF_027_verifyRegisterFunctionalityAcrossSupportedEnvironments</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token &apos;&lt;&apos;, &quot;&lt;b&gt;Warning&quot;... is not valid JSON
+OK
+&lt;b&gt;Warning&lt;/b&gt;: mail(): Failed to connect to mailserver at &amp;quot;localhost&amp;quot; port 25, verify your &amp;quot;SMTP&amp;quot; and &amp;quot;smtp_port&amp;quot; setting in php.ini or use ini_set() in &lt;b&gt;C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php&lt;/b&gt; on line &lt;b&gt;83&lt;/b&gt;[]}
+  (Session info: chrome=147.0.7727.119): SyntaxError: Unexpected token &apos;&lt;&apos;, &quot;&lt;b&gt;Warning&quot;... is not valid JSON
+OK
+&lt;b&gt;Warning&lt;/b&gt;: mail(): Failed to connect to mailserver at &amp;quot;localhost&amp;quot; port 25, verify your &amp;quot;SMTP&amp;quot; and &amp;quot;smtp_port&amp;quot; setting in php.ini or use ini_set() in &lt;b&gt;C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php&lt;/b&gt; on line &lt;b&gt;83&lt;/b&gt;[]
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d385f4a6414ef6c5600b6d6c6967080, findElement {using=css selector, value=#collapse-shipping-method}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.119, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56032}, goog:processID: 25280, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56032/devtoo..., se:cdpVersion: 147.0.7727.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d385f4a6414ef6c5600b6d6c6967080
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:222)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:215)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at pageObjects.BasePage.getAttribute(BasePage.java:77)
+	... 29 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,10 +1,15 @@
 package models;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
-@Builder
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CheckoutData {
 	private String firstName;
     private String lastName;
@@ -14,5 +19,5 @@ public class CheckoutData {
     private String city;
     private String postCode;
     private String country;
-    private String region_state;
+    private String regionState;
 }

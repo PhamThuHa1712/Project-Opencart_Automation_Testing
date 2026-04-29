@@ -23,6 +23,20 @@ public class HomePage extends BasePage {
 	
 	private final By optionCheckout = By.xpath("//nav[@id='top']//li//a[normalize-space()='Checkout']");
 	
+	private final By btnAddToCart = By.xpath("//div[@class='product-thumb transition']//div[@class='button-group']//button[1]");
+	
+	private final By lnkShoppingCart = By.xpath("//a[normalize-space()='shopping cart']");
+	
+	private final By productName = By.xpath("//div[@class='caption']//h4//a");
+	
+	private final By msgAddToCartSuccess = By.xpath("//div[@class='alert alert-success alert-dismissible']");
+	
+	private final By btnCompareProduct = By.xpath("//div[@class='product-thumb transition']//div[@class='button-group']//button[3]");
+	
+	private final By lnkProductComparison = By.xpath("//a[normalize-space()='product comparison']");
+	
+	private final By msgAddProductComparisonSuccess = By.xpath("//div[@class='alert alert-success alert-dismissible']");
+	
 	public BreadcrumbComponent breadcrumb() {
         return breadcrumb;
     }
@@ -68,4 +82,35 @@ public class HomePage extends BasePage {
 		return new ShoppingCartPage(driver);
 	}
 	
+	public HomePage clickAddToCart() {
+		click(btnAddToCart, "Nút thêm giỏ hàng trên sản phẩm");
+		return this;
+	}
+	
+	public ShoppingCartPage clickLnkShoppingCart() {
+		click(lnkShoppingCart, "Shopping Cart");
+		return new ShoppingCartPage(driver);
+	}
+	
+	public String getProductName() {
+		return getText(productName, "Tên sản phẩm");
+	}
+	
+	public String getMsgAddToCartSuccess() {
+		return getText(msgAddToCartSuccess, "Thông báo thêm sản phẩm vào giỏ hàng thành công").replace("×", "").trim();
+	}
+	
+	public HomePage clickCompareProduct() {
+		click(btnCompareProduct, "Nút so sánh sản phẩm");
+		return this;
+	}
+	
+	public ProductComparisonPage clickLnkProductComparison() {
+		click(lnkProductComparison, "Product comparison");
+		return new ProductComparisonPage(driver);
+	}
+	
+	public String getMsgAddProductComparisonSuccess() {
+		return getText(msgAddProductComparisonSuccess, "Thông báo thêm sản phẩm so sánh thành công").replace("×", "").trim();
+	}
 }
