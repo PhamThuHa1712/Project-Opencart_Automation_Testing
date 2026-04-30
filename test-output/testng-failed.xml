@@ -13,7 +13,7 @@
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="resetPageState"/>
-          <include name="TC_CO_017_Checkout_NewUserRegistration"/>
+          <include name="TC_CO_017_Checkout_NewUserRegistration" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- testCases.checkout.CheckoutPositiveTest -->
     </classes>

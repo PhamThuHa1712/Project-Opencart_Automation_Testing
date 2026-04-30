@@ -88,4 +88,13 @@ public class DataProviders {
 			{"TC_LF_005_LoginWithoutCredentials", "", "", "Warning: No match for E-Mail Address and/or Password."}
 		};
 	}
+	
+	// DataProvider 6
+	@DataProvider(name="addressCheckoutData")
+	public Object[][] addressCheckoutData(){
+		return new Object[][] {
+			{"VAT", "15 Station Road", "Tenison Towers", "Cambridge", "United Kingdom", "Cambridgeshire"},
+			{"NOVAT", "Minh Khai - Bắc Từ Liêm", "Minh Khai, Bắc Từ Liêm", "Hà Nội", "Viet Nam", "Ha Noi"}
+		};
+	}
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="17" passed="15" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-30T03:51:24 ICT" name="Suite" finished-at="2026-04-30T03:51:39 ICT" duration-ms="15200">
+  <suite started-at="2026-05-01T04:09:30 ICT" name="Suite" finished-at="2026-05-01T04:12:15 ICT" duration-ms="164397">
     <groups>
     </groups>
-    <test started-at="2026-04-30T03:51:24 ICT" name="Test" finished-at="2026-04-30T03:51:39 ICT" duration-ms="15200">
+    <test started-at="2026-05-01T04:09:30 ICT" name="Test" finished-at="2026-05-01T04:12:15 ICT" duration-ms="164397">
       <class name="testCases.checkout.CheckoutPositiveTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:24 ICT" name="setup" finished-at="2026-04-30T03:51:26 ICT" duration-ms="2214" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:31 ICT" name="setup" finished-at="2026-05-01T04:09:32 ICT" duration-ms="1286" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,347 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:26 ICT" name="resetPageState" finished-at="2026-04-30T03:51:28 ICT" duration-ms="1393" status="PASS">
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:32 ICT" name="resetPageState" finished-at="2026-05-01T04:09:33 ICT" duration-ms="1007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resetPageState -->
-        <test-method signature="TC_CO_017_Checkout_NewUserRegistration()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:28 ICT" name="TC_CO_017_Checkout_NewUserRegistration" finished-at="2026-04-30T03:51:38 ICT" duration-ms="10513" status="FAIL">
+        <test-method signature="TC_CO_002_Checkout_NavigateFromShoppingCartPage()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:33 ICT" name="TC_CO_002_Checkout_NavigateFromShoppingCartPage" finished-at="2026-05-01T04:09:34 ICT" duration-ms="1326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_002_Checkout_NavigateFromShoppingCartPage -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:34 ICT" name="resetPageState" finished-at="2026-05-01T04:09:35 ICT" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_003_Checkout_NavigateFromHeaderOption()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:35 ICT" name="TC_CO_003_Checkout_NavigateFromHeaderOption" finished-at="2026-05-01T04:09:36 ICT" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_003_Checkout_NavigateFromHeaderOption -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:36 ICT" name="resetPageState" finished-at="2026-05-01T04:09:36 ICT" duration-ms="508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_004_Checkout_NavigateFromCartBlock()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:36 ICT" name="TC_CO_004_Checkout_NavigateFromCartBlock" finished-at="2026-05-01T04:09:38 ICT" duration-ms="1411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_004_Checkout_NavigateFromCartBlock -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:38 ICT" name="resetPageState" finished-at="2026-05-01T04:09:38 ICT" duration-ms="404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_005_Checkout_RegUser_ExistingAddress()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:38 ICT" name="TC_CO_005_Checkout_RegUser_ExistingAddress" finished-at="2026-05-01T04:09:50 ICT" duration-ms="11690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_005_Checkout_RegUser_ExistingAddress -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:50 ICT" name="resetPageState" finished-at="2026-05-01T04:09:50 ICT" duration-ms="458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_006_Checkout_RegUser_NewBillingMandatory()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:09:50 ICT" name="TC_CO_006_Checkout_RegUser_NewBillingMandatory" finished-at="2026-05-01T04:10:02 ICT" duration-ms="12104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_006_Checkout_RegUser_NewBillingMandatory -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:02 ICT" name="resetPageState" finished-at="2026-05-01T04:10:03 ICT" duration-ms="447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_007_Checkout_RegUser_NewBillingAllFields()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:03 ICT" name="TC_CO_007_Checkout_RegUser_NewBillingAllFields" finished-at="2026-05-01T04:10:15 ICT" duration-ms="12265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_007_Checkout_RegUser_NewBillingAllFields -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:15 ICT" name="resetPageState" finished-at="2026-05-01T04:10:15 ICT" duration-ms="406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_010_Checkout_RegUser_NewDeliveryMandatory(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:15 ICT" name="TC_CO_010_Checkout_RegUser_NewDeliveryMandatory" data-provider="addressCheckoutData" finished-at="2026-05-01T04:10:27 ICT" duration-ms="11769" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15 Station Road]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tenison Towers]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Cambridge]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[United Kingdom]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Cambridgeshire]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_010_Checkout_RegUser_NewDeliveryMandatory -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:27 ICT" name="resetPageState" finished-at="2026-05-01T04:10:27 ICT" duration-ms="401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_010_Checkout_RegUser_NewDeliveryMandatory(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:27 ICT" name="TC_CO_010_Checkout_RegUser_NewDeliveryMandatory" data-provider="addressCheckoutData" finished-at="2026-05-01T04:10:40 ICT" duration-ms="12168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NOVAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Minh Khai - Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Minh Khai, Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Hà Nội]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Viet Nam]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Ha Noi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_010_Checkout_RegUser_NewDeliveryMandatory -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:40 ICT" name="resetPageState" finished-at="2026-05-01T04:10:40 ICT" duration-ms="438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_011_Checkout_RegUser_NewDeliveryAllFields(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:40 ICT" name="TC_CO_011_Checkout_RegUser_NewDeliveryAllFields" data-provider="addressCheckoutData" finished-at="2026-05-01T04:10:52 ICT" duration-ms="12329" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15 Station Road]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tenison Towers]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Cambridge]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[United Kingdom]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Cambridgeshire]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_011_Checkout_RegUser_NewDeliveryAllFields -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:52 ICT" name="resetPageState" finished-at="2026-05-01T04:10:53 ICT" duration-ms="449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_011_Checkout_RegUser_NewDeliveryAllFields(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:10:53 ICT" name="TC_CO_011_Checkout_RegUser_NewDeliveryAllFields" data-provider="addressCheckoutData" finished-at="2026-05-01T04:11:05 ICT" duration-ms="12281" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NOVAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Minh Khai - Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Minh Khai, Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Hà Nội]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Viet Nam]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Ha Noi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_011_Checkout_RegUser_NewDeliveryAllFields -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:05 ICT" name="resetPageState" finished-at="2026-05-01T04:11:06 ICT" duration-ms="435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_014_Checkout_AddCommentDeliveryMethod()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:06 ICT" name="TC_CO_014_Checkout_AddCommentDeliveryMethod" finished-at="2026-05-01T04:11:16 ICT" duration-ms="10543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_014_Checkout_AddCommentDeliveryMethod -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:16 ICT" name="resetPageState" finished-at="2026-05-01T04:11:17 ICT" duration-ms="396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_015_Checkout_AddCommentPaymentMethod()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:17 ICT" name="TC_CO_015_Checkout_AddCommentPaymentMethod" finished-at="2026-05-01T04:11:27 ICT" duration-ms="10536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_015_Checkout_AddCommentPaymentMethod -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:27 ICT" name="resetPageState" finished-at="2026-05-01T04:11:27 ICT" duration-ms="405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_016_Checkout_GuestFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:27 ICT" name="TC_CO_016_Checkout_GuestFlow" data-provider="addressCheckoutData" finished-at="2026-05-01T04:11:38 ICT" duration-ms="11005" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15 Station Road]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tenison Towers]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Cambridge]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[United Kingdom]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Cambridgeshire]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_016_Checkout_GuestFlow -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:38 ICT" name="resetPageState" finished-at="2026-05-01T04:11:39 ICT" duration-ms="407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_016_Checkout_GuestFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:39 ICT" name="TC_CO_016_Checkout_GuestFlow" data-provider="addressCheckoutData" finished-at="2026-05-01T04:11:50 ICT" duration-ms="10746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NOVAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Minh Khai - Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Minh Khai, Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Hà Nội]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Viet Nam]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Ha Noi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_016_Checkout_GuestFlow -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:50 ICT" name="resetPageState" finished-at="2026-05-01T04:11:50 ICT" duration-ms="413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_017_Checkout_NewUserRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:50 ICT" name="TC_CO_017_Checkout_NewUserRegistration" data-provider="addressCheckoutData" finished-at="2026-05-01T04:11:56 ICT" duration-ms="6426" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15 Station Road]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tenison Towers]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Cambridge]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[United Kingdom]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Cambridgeshire]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[Test dừng do không lấy được attribute từ: Section Delivery Method]]>
@@ -35,9 +371,9 @@
             <full-stacktrace>
               <![CDATA[java.lang.RuntimeException: Test dừng do không lấy được attribute từ: Section Delivery Method
 at pageObjects.BasePage.getAttribute(BasePage.java:83)
-at pageObjects.CheckoutPage.isDeliveryMethod(CheckoutPage.java:539)
-at testCases.checkout.CheckoutPositiveTest.proceedToConfirmOrderForNewCustomer(CheckoutPositiveTest.java:109)
-at testCases.checkout.CheckoutPositiveTest.TC_CO_017_Checkout_NewUserRegistration(CheckoutPositiveTest.java:370)
+at pageObjects.CheckoutPage.isDeliveryMethod(CheckoutPage.java:628)
+at testCases.checkout.CheckoutPositiveTest.proceedToConfirmOrderForNewCustomer(CheckoutPositiveTest.java:125)
+at testCases.checkout.CheckoutPositiveTest.TC_CO_017_Checkout_NewUserRegistration(CheckoutPositiveTest.java:401)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -73,9 +409,9 @@ OK
 Build info: version: '4.41.0', revision: '9fc754f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8d385f4a6414ef6c5600b6d6c6967080, findElement {using=css selector, value=#collapse-shipping-method}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.119, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56032}, goog:processID: 25280, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56032/devtoo..., se:cdpVersion: 147.0.7727.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8d385f4a6414ef6c5600b6d6c6967080
+Command: [cdab554101bcc4569a8dd982ecfa9f7a, findElement {value=#collapse-shipping-method, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.119, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61524}, goog:processID: 30900, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61524/devtoo..., se:cdpVersion: 147.0.7727.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cdab554101bcc4569a8dd982ecfa9f7a
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
@@ -97,7 +433,121 @@ at pageObjects.BasePage.getAttribute(BasePage.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CO_017_Checkout_NewUserRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@1b765a2c]" started-at="2026-04-30T03:51:39 ICT" name="tearDown" finished-at="2026-04-30T03:51:39 ICT" duration-ms="382" status="PASS">
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:57 ICT" name="resetPageState" finished-at="2026-05-01T04:11:57 ICT" duration-ms="481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_017_Checkout_NewUserRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:11:57 ICT" name="TC_CO_017_Checkout_NewUserRegistration" data-provider="addressCheckoutData" finished-at="2026-05-01T04:12:03 ICT" duration-ms="6269" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NOVAT]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Minh Khai - Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Minh Khai, Bắc Từ Liêm]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Hà Nội]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Viet Nam]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Ha Noi]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Test dừng do không lấy được attribute từ: Section Delivery Method]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Test dừng do không lấy được attribute từ: Section Delivery Method
+at pageObjects.BasePage.getAttribute(BasePage.java:83)
+at pageObjects.CheckoutPage.isDeliveryMethod(CheckoutPage.java:628)
+at testCases.checkout.CheckoutPositiveTest.proceedToConfirmOrderForNewCustomer(CheckoutPositiveTest.java:125)
+at testCases.checkout.CheckoutPositiveTest.TC_CO_017_Checkout_NewUserRegistration(CheckoutPositiveTest.java:401)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : SyntaxError: Unexpected token '<', "<b>Warning"... is not valid JSON
+OK
+<b>Warning</b>: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in <b>C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php</b> on line <b>83</b>[]}
+  (Session info: chrome=147.0.7727.119): SyntaxError: Unexpected token '<', "<b>Warning"... is not valid JSON
+OK
+<b>Warning</b>: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in <b>C:\xampp\htdocs\opencart\upload\system\library\mail\mail.php</b> on line <b>83</b>[]
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cdab554101bcc4569a8dd982ecfa9f7a, findElement {value=#collapse-shipping-method, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.119, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61524}, goog:processID: 30900, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61524/devtoo..., se:cdpVersion: 147.0.7727.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cdab554101bcc4569a8dd982ecfa9f7a
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:140)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:222)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:215)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+at pageObjects.BasePage.getAttribute(BasePage.java:77)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_017_Checkout_NewUserRegistration -->
+        <test-method is-config="true" signature="resetPageState()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:12:03 ICT" name="resetPageState" finished-at="2026-05-01T04:12:04 ICT" duration-ms="493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPageState -->
+        <test-method signature="TC_CO_018_Checkout_LoginDuringFlow()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:12:04 ICT" name="TC_CO_018_Checkout_LoginDuringFlow" finished-at="2026-05-01T04:12:15 ICT" duration-ms="10618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_CO_018_Checkout_LoginDuringFlow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.checkout.CheckoutPositiveTest@51972dc7]" started-at="2026-05-01T04:12:15 ICT" name="tearDown" finished-at="2026-05-01T04:12:15 ICT" duration-ms="188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

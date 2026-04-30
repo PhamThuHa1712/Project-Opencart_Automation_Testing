@@ -1,0 +1,36 @@
+04:12:04.461 [main] INFO  testCases.checkout.CheckoutPositiveTest - ***** Bắt đầu TC_CO_018_Checkout_LoginDuringFlow *****
+04:12:04.535 [main] INFO  pageObjects.HomePage - Thành công: Đã nhập giá trị 'iMac' vào [Ô tìm kiếm]
+04:12:04.916 [main] INFO  pageObjects.HomePage - Thành công: Đã click vào [Nút tìm kiếm]
+04:12:04.977 [main] INFO  pageObjects.SearchPage - Thành công: Đã click vào [Nút thêm sản phẩm vào giỏ hàng]
+04:12:05.278 [main] INFO  pageObjects.SearchPage - Thành công: Đã click vào [Shopping Cart]
+04:12:05.290 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã tìm thấy 1 phần tử của [Các hàng của bảng]
+04:12:05.310 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được attribute [value] từ [Số lượng] là: '1'
+04:12:05.329 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Giá sản phẩm] là: '$122.00'
+04:12:05.348 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Tổng tiền] là: '$122.00'
+04:12:05.354 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã tìm thấy 1 phần tử của [Các hàng của bảng]
+04:12:05.361 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã tìm thấy 6 phần tử của [Các cột của bảng]
+04:12:05.381 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 2] là: 'iMac'
+04:12:05.399 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 3] là: 'Product 14'
+04:12:05.415 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được attribute [value] từ [Hàng 1Cột 4] là: '1'
+04:12:05.439 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 5] là: '$122.00'
+04:12:05.457 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã lấy được text từ [Hàng 1Cột 6] là: '$122.00'
+04:12:05.694 [main] INFO  pageObjects.ShoppingCartPage - Thành công: Đã click vào [Nút Checkout]
+04:12:05.707 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Tiêu đề Checkout]: Đang hiển thị.
+04:12:06.306 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'phamthuha7204@gmail.com' vào [Email in Checkout Options]
+04:12:06.378 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã nhập giá trị 'test@123' vào [Password in Checkout Options]
+04:12:06.447 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Button Login in Checkout Options]
+04:12:06.984 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [class] từ [Section Billing Detail] là: 'panel-collapse collapsing'
+04:12:07.000 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [aria-expanded] từ [Section Billing Detail] là: 'true'
+04:12:07.020 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [I want to use an existing address in Billing Details]: Đang được chọn.true
+04:12:07.086 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Billing Details]
+04:12:07.639 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [class] từ [Section Delivery Detail] là: 'panel-collapse collapse in'
+04:12:07.655 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [aria-expanded] từ [Section Delivery Detail] là: 'true'
+04:12:07.676 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [I want to use an existing address in Delivary Details]: Đang được chọn.true
+04:12:07.743 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Delivery Details]
+04:12:08.275 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [class] từ [Section Delivery Method] là: 'panel-collapse collapse in'
+04:12:08.291 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [aria-expanded] từ [Section Delivery Method] là: 'true'
+04:12:08.308 [main] INFO  pageObjects.CheckoutPage - Kiểm tra trạng thái hiển thị của [Flat Shipping Rate]: Đang được chọn.true
+04:12:08.374 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Nút Continue trong mục Delivery Method]
+04:12:08.909 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [class] từ [Section Payment Method] là: 'panel-collapse collapse in'
+04:12:08.925 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã lấy được attribute [aria-expanded] từ [Section Payment Method] là: 'true'
+04:12:08.986 [main] INFO  pageObjects.CheckoutPage - Thành công: Đã click vào [Checkbox Terms & Conditions]

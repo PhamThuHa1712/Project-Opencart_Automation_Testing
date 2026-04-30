@@ -56,6 +56,8 @@ public class CheckoutPage extends BasePage {
 	
 	private final By total = By.xpath("//div[@class='table-responsive']//table//tfoot//tr[3]//td[2]");
 	
+	private final By totalVat = By.xpath("//div[@class='table-responsive']//table//tfoot//tr[5]//td[2]");
+	
 	private final By newAddressBilling = By.xpath("//input[@value='new']");
 	
 	private final By firstNameBilling = By.xpath("//input[@id='input-payment-firstname']");
@@ -116,7 +118,9 @@ public class CheckoutPage extends BasePage {
 	
 	private final By btnCtnNewCustomer = By.cssSelector("#button-account");
 	
-	private final By sectionBillingDetails = By.cssSelector("#collapse-payment-address");
+	private final By sectionBillingDetails = By.cssSelector("#collapse-payment-address"); 
+	
+	private final By sectionDeliveryDetails = By.cssSelector("#collapse-shipping-address");
 	
 	private final By sameDeliveryAndBillingAddress = By.cssSelector("input[value='1'][name='shipping_address']");
 	
@@ -147,6 +151,8 @@ public class CheckoutPage extends BasePage {
 	private final By btnRegisterBillingCtn = By.cssSelector("#button-register");
 			
 	private final By checkboxPolicy = By.cssSelector("input[value='1'][name='agree']");
+	
+	private final By btnShoppingCart = By.cssSelector("a[title='Shopping Cart']");
 	
 	public boolean isDisplayCheckoutPage() {
 		return isElementDisplayed(titleCheckout, "Tiêu đề Checkout");
@@ -220,34 +226,112 @@ public class CheckoutPage extends BasePage {
 			List<Object> subList = new ArrayList<>();
 			for(int j = 1; j <= cols; j++) {
 				By xpathEle = By.xpath("//div[@class='table-responsive']//table//tbody//tr[" + i + "]//td[" + j + "]");
-				subList.add(getText(xpathEle, "Hàng " + i + "Cột " + j).replace(",", "")); //
+				subList.add(getText(xpathEle, "Hàng " + i + "Cột " + j).replace(",", "").replace("$", "")); //
 			}
 			list.add(subList);
 		}
 		return list;
 	}
 	
-	public boolean compareConfirmOrder(List<List<Object>> listShoppingCart, List<List<Object>> listCheckout) {
-		return listShoppingCart.equals(listCheckout);
+	public boolean compare(List<List<Object>> listShoppingCart, List<List<Object>> listCheckout) {
+		boolean flag = true;
+		int size = listShoppingCart.size();
+		int subSize = listShoppingCart.get(0).size();
+		for(int i = 0; i < size; i++) {
+			List<Object> subCart = listShoppingCart.get(i);
+			List<Object> subOrder = listCheckout.get(i);
+			for(int j = 0; j < subSize; j++) {
+				if(j == subSize - 2 || j == subSize - 1) {
+					flag = Math.abs(Double.parseDouble((String) subCart.get(j)) - 
+						    			Double.parseDouble((String) subOrder.get(j))) > 0.01 ? false: true;
+				} else {
+					flag = ((String) subCart.get(j)).equalsIgnoreCase(((String) subOrder.get(j)));
+				}
+			}
+		}
+		return flag;
 	}
 	
-	// so sánh Sub-Total và Total, danh sách được truyền vào là danh sách sản phẩm thanh toán
-	public boolean verifyTotalPrice(List<List<Object>> li) {
+	public boolean compareCusConfirmOrder(List<List<Object>> listShoppingCart, List<List<Object>> listCheckout, boolean isVat) {
+		// Nếu khách hàng ở địa điểm tính thuế thì giá sản phẩm trong giỏ hàng phải công thêm thuế trước khi so sánh với giá trong đơn hàng
+		if(isVat) {
+			for(int i = 0; i < listShoppingCart.size(); i++) {
+				List<Object> subLi = listShoppingCart.get(i);
+				// giá của 1 sản phẩm
+				int quantity = Integer.parseInt(subLi.get(2).toString());
+				double unitPrice = Double.parseDouble(subLi.get(subLi.size() - 2).toString().replace(",", ""));
+				unitPrice += (unitPrice * 0.2);
+				unitPrice += 2; // 1 sản phẩm nên ecoTax = 2
+				subLi.set(subLi.size() - 2, String.valueOf(unitPrice));
+				// tổng giá của n sp
+				double total = Double.parseDouble(subLi.get(subLi.size() - 1).toString().replace(",", ""));
+				total += (total * 0.2);
+				total += (quantity * 2); // mỗi sản phẩm có ecoTax = 2
+				subLi.set(subLi.size() - 1, String.valueOf(total)); 
+			}
+		}
+		return compare(listShoppingCart, listCheckout);
+	}
+	
+	public boolean compareGuestConfirmOrder(List<List<Object>> listShoppingCart, List<List<Object>> listCheckout, boolean isVat) {
+		// Nếu khách hàng vãng lai ở địa điểm không tính thuế thì giá sản phẩm trong giỏ hàng phải trừ thuế đi trước khi so sánh với giá trong đơn hàng
+		if(!isVat) {
+			for(int i = 0; i < listShoppingCart.size(); i++) {
+				List<Object> subLi = listShoppingCart.get(i);
+				// giá của 1 sản phẩm
+				int quantity = Integer.parseInt(subLi.get(2).toString());
+				double unitPrice = Double.parseDouble(subLi.get(subLi.size() - 2).toString().replace(",", ""));
+				unitPrice -= 2;
+				unitPrice = (unitPrice / 1.2);
+				subLi.set(subLi.size() - 2, String.valueOf(unitPrice));
+				// tổng giá của n sp
+				double total = Double.parseDouble(subLi.get(subLi.size() - 1).toString().replace(",", ""));
+				total -= (quantity * 2);
+				total = (total / 1.2);
+				subLi.set(subLi.size() - 1, String.valueOf(total));
+			}
+		}
+		return compare(listShoppingCart, listCheckout);
+	}
+	
+	// so sánh Sub-Total và Total, danh sách được truyền vào là danh sách sản phẩm thanh toán. Nếu là địa chỉ có tính thuế thì phải tính thêm thuế
+	public boolean verifyTotalPrice(List<List<Object>> li, boolean isVat) {
 		double subTotal = 0;
 		boolean flag = true;
+		double ecoTax = 0;
+		double vat = 0;
 		
 		for(int i = 0; i < li.size(); i++) {
 			List<Object> subLi = li.get(i);
-			subTotal += Double.parseDouble(subLi.get(subLi.size() - 1).toString().substring(1));
+			double quantity = Double.parseDouble(subLi.get(2).toString()); // Lấy ra số lượng
+			double unitPrice = Double.parseDouble(subLi.get(subLi.size() - 1).toString()); // lấy ra tổng tiền của 1 sản phẩm
+			// nếu có thuế thì phải trừ đi vat và ecotax để lấy giá gốc cho subTotal
+			if(isVat) {
+				unitPrice -= (2 * quantity); // vì giá này nó đã tính thêm ecoTax = 2 cho từng sản phẩm
+				unitPrice = (unitPrice / 1.2); // tính vat = 20%
+				
+				ecoTax += (2 * quantity); // ecoTax cho từng sản phẩm
+				vat += (unitPrice * 0.2); // vat cho từng sản phẩm
+			}
+			subTotal += unitPrice;
 		}
 		
-		double currentSubTotal = Double.parseDouble(getText(subTotalXpath, "Sub-Total").toString().trim().substring(1).replace(",", ""));
+		double currentSubTotal = Double.parseDouble(getText(subTotalXpath, "Sub-Total").toString().trim().replace("$", "").replace(",", ""));
 		if(currentSubTotal != subTotal) flag = false;
 		
-		double shippingRate = Double.parseDouble(getText(flatShippingRate, "Flat Shipping Rate").toString().substring(1).replace(",", ""));
+		double shippingRate = Double.parseDouble(getText(flatShippingRate, "Flat Shipping Rate").toString().replace("$", "").replace(",", ""));
 		double expectedTotal = shippingRate + subTotal;
-		double currentTotal = Double.parseDouble(getText(total, "Total").toString().substring(1).replace(",", ""));
+		double currentTotal = Double.parseDouble(getText(total, "Total").toString().replace("$", "").replace(",", ""));
 		
+		if(isVat) {
+			ecoTax += 2; // cộng thêm 2 là eco-tax của ship
+			vat += (0.2 * shippingRate); // cộng thêm vat cho ship
+			expectedTotal += (ecoTax + vat);
+			
+			// Khi có thêm vat và ecoTax thì dòng total là dòng 
+			currentTotal = Double.parseDouble(getText(totalVat, "Total").toString().replace("$", "").replace(",", ""));
+			
+		}
 		// hai số double có thể sai lệch phần thập phân
 		if(Math.abs(expectedTotal - currentTotal) > 0.01) flag = false;
 		
@@ -477,6 +561,11 @@ public class CheckoutPage extends BasePage {
 		return isElementSelected(sameDeliveryAndBillingAddress, "My delivery and billing addresses are the same.");
 	}
 	
+	public boolean isDeliveryDetails() {
+		return getAttribute(sectionDeliveryDetails, "Section Delivery Detail", "class").contains("in") && 
+	           getAttribute(sectionDeliveryDetails, "Section Delivery Detail", "aria-expanded").equals("true");
+	}
+	
 	public CheckoutPage fillBillingDetailGuestCheckout(GuestCheckoutData data) {
 		type(firstNameBilling, data.getFirstName(), "First Name");
 		type(lastNameBilling, data.getLastName(), "Last Name");
@@ -563,5 +652,25 @@ public class CheckoutPage extends BasePage {
 	public CheckoutPage checkPolicy() {
 		click(checkboxPolicy, "Policy Privacy");
 		return this;
+	}
+	
+	public CheckoutPage typeEmailLogin(String email) {
+		type(txtEmailLogin, email, "Email in Checkout Options");
+		return this;
+	}
+	
+	public CheckoutPage typePasswordLogin(String pwd) {
+		type(txtPasswordLogin, pwd, "Password in Checkout Options");
+		return this;
+	}
+	
+	public CheckoutPage clickLogin() {
+		click(btnLogin, "Button Login in Checkout Options");
+		return this;
+	}
+	
+	public ShoppingCartPage goToShoppingCart() {
+		click(btnShoppingCart, "Shopping Cart");
+		return new ShoppingCartPage(driver);
 	}
 }
