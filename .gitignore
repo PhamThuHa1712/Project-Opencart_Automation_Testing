@@ -7,3 +7,4 @@ screenshots/
 .classpath
 .project
 .factorypath
+src/test/resources/config.properties
