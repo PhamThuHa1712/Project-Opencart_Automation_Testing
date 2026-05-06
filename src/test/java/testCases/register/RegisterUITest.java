@@ -26,8 +26,8 @@ public class RegisterUITest extends BaseClass {
 	
 	
 	@Test
-	public void TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks() {
-		logger.info("***** Bắt đầu TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks *****");
+	public void TC_RF_017_verifyNavigationToRegisterPageFromDifferentLinks() {
+		logger.info("***** Bắt đầu TC_RF_017_verifyNavigationToRegisterPageFromDifferentLinks *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertTrue(regpage.isPageRegisterHeading(), "Không đến được trang đăng ký từ trang chủ");
@@ -40,12 +40,12 @@ public class RegisterUITest extends BaseClass {
 		
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_RF_007_verifyNavigationToRegisterPageFromDifferentLinks *****");
+		logger.info("***** Kết thúc TC_RF_017_verifyNavigationToRegisterPageFromDifferentLinks *****");
 	}
 	
 	@Test
-	public void TC_RF_013_verifyFieldPlaceholders() {
-		logger.info("***** Bắt đầu TC_RF_013_verifyFieldPlaceholders *****");
+	public void TC_RF_018_verifyFieldPlaceholders() {
+		logger.info("***** Bắt đầu TC_RF_018_verifyFieldPlaceholders *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertEquals(regpage.getFirstNamePlaceholder(), "First Name", "Sai placeholder First Name");
@@ -56,12 +56,12 @@ public class RegisterUITest extends BaseClass {
 	    softAssert.assertEquals(regpage.getConfirmPasswordPlaceholder(), "Password Confirm", "Sai placeholder Password Confirm");
 
 		softAssert.assertAll();
-		logger.info("***** Kết thúc TC_RF_013_verifyFieldPlaceholders *****");
+		logger.info("***** Kết thúc TC_RF_018_verifyFieldPlaceholders *****");
 	}
 	
 	@Test
-	public void TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk() {
-		logger.info("***** Bắt đầu TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk *****");
+	public void TC_RF_019_verifyMandatoryFieldsHaveRedAsterisk() {
+		logger.info("***** Bắt đầu TC_RF_019_verifyMandatoryFieldsHaveRedAsterisk *****");
 
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertTrue(regpage.isRequiredField(RegisterField.FIRSTNAME), "Trường FirstName không có dấu * đỏ");
@@ -74,12 +74,12 @@ public class RegisterUITest extends BaseClass {
 		
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_RF_014_verifyMandatoryFieldsHaveRedAsterisk *****");
+		logger.info("***** Kết thúc TC_RF_019_verifyMandatoryFieldsHaveRedAsterisk *****");
 	}
 	
 	@Test
-	public void TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed() {
-		logger.info("***** Bắt đầu TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed *****");
+	public void TC_RF_021_verifyLeadingAndTrailingSpacesAreTrimmed() {
+		logger.info("***** Bắt đầu TC_RF_021_verifyLeadingAndTrailingSpacesAreTrimmed *****");
 		
 		RegisterData data = TestDataFactory.leadingAndTrailingSpaceData();
 		MyAccountInformationPage accInfo = regpage.fillRegisterForm(data).clickContinueSuccess().clickCnt().clickEditAccount();
@@ -92,36 +92,36 @@ public class RegisterUITest extends BaseClass {
 		
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_RF_019_verifyLeadingAndTrailingSpacesAreTrimmed *****");
+		logger.info("***** Kết thúc TC_RF_021_verifyLeadingAndTrailingSpacesAreTrimmed *****");
 	}
 	
 	
 	@Test
-	public void TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault() {
-		logger.info("***** Bắt đầu TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault *****");
+	public void TC_RF_022_verifyPrivacyPolicyNotSelectedByDefault() {
+		logger.info("***** Bắt đầu TC_RF_022_verifyPrivacyPolicyNotSelectedByDefault *****");
 		
 		Assert.assertFalse(regpage.isSelectedPolicy(), "Hộp kiểm Privacy Policy được tích sẵn");
 	
-		logger.info("***** Kết thúc TC_RF_020_verifyPrivacyPolicyNotSelectedByDefault *****");
+		logger.info("***** Kết thúc TC_RF_022_verifyPrivacyPolicyNotSelectedByDefault *****");
 	}
 	
 	
 	@Test
-	public void TC_RF_022_verifyPasswordCharactersAreMasked() {
-		logger.info("***** Bắt đầu TC_RF_022_verifyPasswordCharactersAreMasked *****");
+	public void TC_RF_023_verifyPasswordCharactersAreMasked() {
+		logger.info("***** Bắt đầu TC_RF_023_verifyPasswordCharactersAreMasked *****");
 		
 		regpage.setPassword("123456").setConfirmPassword("123456");
 		Assert.assertTrue(regpage.hidePasswordAndConfPassword());
 		
-		logger.info("***** Kết thúc TC_RF_022_verifyPasswordCharactersAreMasked *****");
+		logger.info("***** Kết thúc TC_RF_023_verifyPasswordCharactersAreMasked *****");
 	}
 	
 	// Test việc điều hướng đến các trang tương ứng khi nhấn các link trên trang đăng kýy
 	@Test
-	public void TC_RF_023_verifyNavigationLinksOnRegisterPage() {
-		logger.info("***** Bắt đầu TC_RF_023_verifyNavigationLinksOnRegisterPage *****");
+	public void TC_RF_024_verifyNavigationLinksOnRegisterPage() {
+		logger.info("***** Bắt đầu TC_RF_024_verifyNavigationLinksOnRegisterPage *****");
 
-		logger.info("***** Kết thúc TC_RF_023_verifyNavigationLinksOnRegisterPage *****");
+		logger.info("***** Kết thúc TC_RF_024_verifyNavigationLinksOnRegisterPage *****");
 	}
 	
 	@Test

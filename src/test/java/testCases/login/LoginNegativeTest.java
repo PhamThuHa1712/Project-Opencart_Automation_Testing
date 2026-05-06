@@ -38,12 +38,12 @@ public class LoginNegativeTest extends BaseClass {
 	}
 	
 	@Test(priority=2)
-	public void TC_LF_012_UnsuccessfulLoginAttempts() {
-		logger.info("***** Bắt đầu TC_LF_012_UnsuccessfulLoginAttempts *****");
+	public void TC_LF_008_UnsuccessfulLoginAttempts() {
+		logger.info("***** Bắt đầu TC_LF_008_UnsuccessfulLoginAttempts *****");
 		
-		String currentWarning = lp.typeEmail("hathuha@gmail.com").typePassword("wrong_password").clickLogin6Times().checkWarnExceeded();
+		String currentWarning = lp.typeEmail(rb.getString("lockEmail")).typePassword("wrong_password").clickLogin6Times().checkWarnExceeded();
 		Assert.assertEquals(currentWarning, "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.", "Cảnh báo đăng nhập sai vượt quá số lần cho phép không khớp");
 		
-		logger.info("***** Kết thúc TC_LF_012_UnsuccessfulLoginAttempts *****");
+		logger.info("***** Kết thúc TC_LF_008_UnsuccessfulLoginAttempts *****");
 	}
 }

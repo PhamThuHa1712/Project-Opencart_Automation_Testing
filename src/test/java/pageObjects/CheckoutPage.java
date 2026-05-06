@@ -3,6 +3,7 @@ package pageObjects;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,8 @@ public class CheckoutPage extends BasePage {
 	}
 	
 	private final By titleCheckout = By.xpath("//h1[normalize-space()='Checkout']");
+	
+	private final By breadcrumb = By.cssSelector(".breadcrumb li");
 	
 	private final By radioBilling= By.xpath("//input[@value='existing' and @name='payment_address']");
 	
@@ -98,17 +101,17 @@ public class CheckoutPage extends BasePage {
 	
 	private final By regionStateDelivery = By.cssSelector("#input-shipping-zone");
 	
-	private final By msgValidationFirstNameBilling = By.xpath("//input[@name='firstname']//following-sibling::div[@class='text-danger']");
+	private final By msgValidationFirstName = By.xpath("//input[@name='firstname']//following-sibling::div[@class='text-danger']");
 	
-	private final By msgValidationLastNameBilling = By.xpath("//input[@name='lastname']//following-sibling::div[@class='text-danger']");
+	private final By msgValidationLastName = By.xpath("//input[@name='lastname']//following-sibling::div[@class='text-danger']");
 	
-	private final By msgValidationAddressBilling = By.xpath("//input[@name='address_1']//following-sibling::div[@class='text-danger']");
+	private final By msgValidationAddress = By.xpath("//input[@name='address_1']//following-sibling::div[@class='text-danger']");
 	
-	private final By msgValidationCityBilling = By.xpath("//input[@name='city']//following-sibling::div[@class='text-danger']");
+	private final By msgValidationCity = By.xpath("//input[@name='city']//following-sibling::div[@class='text-danger']");
 	
-	private final By msgValidationPostcodeBilling = By.xpath("//input[@name='postcode']//following-sibling::div[@class='text-danger']");
+	private final By msgValidationPostcode = By.xpath("//input[@name='postcode']//following-sibling::div[@class='text-danger']");
 	
-	private final By msgValidationRegionStateBilling = By.xpath("//select[@id='input-payment-zone']//following-sibling::div[@class='text-danger']");
+	private final By msgValidationRegionState = By.xpath("//select[@id='input-payment-zone']//following-sibling::div[@class='text-danger']");
 	
 	private final By txtCommentInDeliveryMethod = By.cssSelector("div[id='collapse-shipping-method'] textarea[name='comment']");
 	
@@ -418,28 +421,28 @@ public class CheckoutPage extends BasePage {
 		return this;
 	}
 	
-	public String getValidationFirstNameBilling() {
-		return getText(msgValidationFirstNameBilling, "Thông báo First Name must be between 1 and 32 characters!");
+	public String getValidationFirstName() {
+		return getText(msgValidationFirstName, "Thông báo First Name must be between 1 and 32 characters!");
 	}
 	
-	public String getValidationLastNameBilling() {
-		return getText(msgValidationLastNameBilling, "Thông báo Last Name must be between 1 and 32 characters!");
+	public String getValidationLastName() {
+		return getText(msgValidationLastName, "Thông báo Last Name must be between 1 and 32 characters!");
 	}
 	
-	public String getValidationAddressBilling() {
-		return getText(msgValidationAddressBilling, "Thông báo Address 1 must be between 3 and 128 characters!");
+	public String getValidationAddress() {
+		return getText(msgValidationAddress, "Thông báo Address 1 must be between 3 and 128 characters!");
 	}
 	
-	public String getValidationCityBilling() {
-		return getText(msgValidationCityBilling, "Thông báo City must be between 2 and 128 characters!");
+	public String getValidationCity() {
+		return getText(msgValidationCity, "Thông báo City must be between 2 and 128 characters!");
 	}
 	
-	public String getValidationPostcodeBilling() {
-		return getText(msgValidationPostcodeBilling, "Thông báo Postcode must be between 2 and 10 characters!");
+	public String getValidationPostcode() {
+		return getText(msgValidationPostcode, "Thông báo Postcode must be between 2 and 10 characters!");
 	}
 	
-	public String getValidationRegionStateBilling() {
-		return getText(msgValidationRegionStateBilling, "Thông báo Please select a region / state!");
+	public String getValidationRegionState() {
+		return getText(msgValidationRegionState, "Thông báo Please select a region / state!");
 	}
 	
 	public String getPlaceHoderFirstNameBilling() {
@@ -473,6 +476,34 @@ public class CheckoutPage extends BasePage {
 	public CheckoutPage selectNewAddressDelivery() {
 		click(newAddressDelivery, "I want to use a new address");
 		return this;
+	}
+	
+	public String getPlaceHoderFirstNameDelivery() {
+		return getAttribute(firstNameDelivery, "Ô First Name", "placeholder");
+	}
+	
+	public String getPlaceHoderLastNameDelivery() {
+		return getAttribute(lastNameDelivery, "Ô Last Name", "placeholder");
+	}
+	
+	public String getPlaceHoderAddress1Delivery() {
+		return getAttribute(address1Delivery, "Ô Address 1", "placeholder");
+	}
+	
+	public String getPlaceHoderCityDelivery() {
+		return getAttribute(cityDelivery, "Ô City", "placeholder");
+	}
+	
+	public String getPlaceHoderPostcodeDelivery() {
+		return getAttribute(postCodeDelivery, "Ô Post code", "placeholder");
+	}
+	
+	public String getPlaceHoderAddress2Delivery() {
+		return getAttribute(address2Delivery, "Ô Address 2", "placeholder");
+	}
+	
+	public String getPlaceHoderCompanyDelivery() {
+		return getAttribute(companyDelivery, "Ô Company", "placeholder");
 	}
 	
 	// ko kiểm tra isDisplayed cho từng trường mà dùng hàm để lấy ra các trường ko hiển thị để viết ít softAssert mà vẫn lấy được ptu ko hiển thị
@@ -672,5 +703,21 @@ public class CheckoutPage extends BasePage {
 	public ShoppingCartPage goToShoppingCart() {
 		click(btnShoppingCart, "Shopping Cart");
 		return new ShoppingCartPage(driver);
+	}
+	
+	public List<String> getBreadcrumbCorrect() {
+		List<WebElement> eles = getElements(breadcrumb, "Breadcrumb");
+		
+		return eles.stream().map(e -> e.getText().trim()).filter(s -> !s.isEmpty()).collect(Collectors.toList());
+	}
+	
+	public String getUrl() {
+		wait.until(ExpectedConditions.urlContains("checkout"));
+		return driver.getCurrentUrl();
+	}
+	
+	public String getTitle() {
+		wait.until(ExpectedConditions.titleIs("Checkout"));
+		return driver.getTitle();
 	}
 }

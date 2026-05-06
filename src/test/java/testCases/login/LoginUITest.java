@@ -27,8 +27,8 @@ public class LoginUITest extends BaseClass {
 	}
 	
 	@Test
-	public void TC_LF_006_ForgottenPasswordLink() {
-		logger.info("***** Bắt đầu TC_LF_006_ForgottenPasswordLink *****");
+	public void TC_LF_009_ForgottenPasswordLink() {
+		logger.info("***** Bắt đầu TC_LF_009_ForgottenPasswordLink *****");
 
 		openLoginPage();
 		Assert.assertTrue(lp.displayLoginPage(), "Không hiển thị trang Login");
@@ -37,12 +37,12 @@ public class LoginUITest extends BaseClass {
 		ForgotPasswordPage fp = lp.clickForgotPassword();
 		Assert.assertEquals(fp.getHeadingForgotPwdPage(), "Forgot Your Password?", "Trang Forgotten Password không hiển thị");
 		
-		logger.info("***** Kết thúc TC_LF_006_ForgottenPasswordLink *****");
+		logger.info("***** Kết thúc TC_LF_009_ForgottenPasswordLink *****");
 	}
 	
 	@Test
-	public void TC_LF_008_PlaceholderText() {
-		logger.info("***** Bắt đầu TC_LF_008_PlaceholderText *****");
+	public void TC_LF_010_PlaceholderText() {
+		logger.info("***** Bắt đầu TC_LF_010_PlaceholderText *****");
 		
 		openLoginPage();
 		SoftAssert softAssert = new SoftAssert();
@@ -50,44 +50,44 @@ public class LoginUITest extends BaseClass {
 		softAssert.assertEquals(lp.getPlaceholderPassword(), "Password", "Placeholder trường Password không chính xác");
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_LF_008_PlaceholderText *****");
+		logger.info("***** Kết thúc TC_LF_010_PlaceholderText *****");
 	}
 	
 	@Test
-	public void TC_LF_009_BrowsingBackAfterLogin() {
-		logger.info("***** Bắt đầu TC_LF_009_BrowsingBackAfterLogin *****");
+	public void TC_LF_011_BrowsingBackAfterLogin() {
+		logger.info("***** Bắt đầu TC_LF_011_BrowsingBackAfterLogin *****");
 
 		openLoginPage();
 		MyAccountPage myacc = lp.typeEmail(rb.getString("email")).typePassword(rb.getString("password")).clickLoginSuccess().clickBrowserBack();
 		Assert.assertTrue(myacc.isMyAccountPageExists(), "Bị đăng xuất sau khi nhấn nút Back của trình duyệt");
 		
-		logger.info("***** Kết thúc TC_LF_009_BrowsingBackAfterLogin *****");
+		logger.info("***** Kết thúc TC_LF_011_BrowsingBackAfterLogin *****");
 	}
 	
 	@Test
-	public void TC_LF_010_BrowsingBackAfterLogout() {
-		logger.info("***** Bắt đầu TC_LF_010_BrowsingBackAfterLogout *****");
+	public void TC_LF_012_BrowsingBackAfterLogout() {
+		logger.info("***** Bắt đầu TC_LF_012_BrowsingBackAfterLogout *****");
 		
 		openLoginPage();
 		lp.typeEmail(rb.getString("email")).typePassword(rb.getString("password")).clickLoginSuccess().clickMyAcc().clickOptionLogout().clickBrowserBack();
 		Assert.assertTrue(lp.displayLoginPage(), "Sau khi đăng xuất người dùng được đăng nhập lại sau khi nhấn nút Back trên trình duyệt");
 		
-		logger.info("***** Kết thúc TC_LF_010_BrowsingBackAfterLogout *****");
+		logger.info("***** Kết thúc TC_LF_012_BrowsingBackAfterLogout *****");
 	}
 	
 	// Test việc điều hướng đến các trang tương ứng khi nhấn các link trên trang đăng nhậpp
 	@Test
-	public void TC_LF_019_MapsToDifferentPages() {
-		logger.info("***** TC_LF_019_MapsToDifferentPages *****");
+	public void TC_LF_013_MapsToDifferentPages() {
+		logger.info("***** TC_LF_013_MapsToDifferentPages *****");
 		
 		openLoginPage();
 		
-		logger.info("***** TC_LF_019_MapsToDifferentPages *****");
+		logger.info("***** TC_LF_013_MapsToDifferentPages *****");
 	}
 	
 	@Test
-	public void TC_LF_020_DifferentWaysOfNavigatingToLogin() {
-		logger.info("***** TC_LF_020_DifferentWaysOfNavigatingToLogin *****");
+	public void TC_LF_014_DifferentWaysOfNavigatingToLogin() {
+		logger.info("***** TC_LF_014_DifferentWaysOfNavigatingToLogin *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		hp = new HomePage(driver);
@@ -100,12 +100,12 @@ public class LoginUITest extends BaseClass {
 		lp = lp.clickDropdownMyAccount().clickOptionLogin();
 		softAssert.assertTrue(lp.displayLoginPage(), "Không điều hướng đến trang đăng nhập thông qua lựa chọn 'login' trong 'My Account'");
 		
-		logger.info("***** TC_LF_020_DifferentWaysOfNavigatingToLogin *****");
+		logger.info("***** TC_LF_014_DifferentWaysOfNavigatingToLogin *****");
 	}
 	
 	@Test
-	public void TC_LF_021_BreadcrumbPageTitleURL() {
-		logger.info("***** TC_LF_021_BreadcrumbPageTitleURL *****");
+	public void TC_LF_015_BreadcrumbPageTitleURL() {
+		logger.info("***** TC_LF_015_BreadcrumbPageTitleURL *****");
 		
 		openLoginPage();
 		List<String> breadcrumb = Arrays.asList("Account", "Login");
@@ -116,6 +116,6 @@ public class LoginUITest extends BaseClass {
 		softAssert.assertTrue(lp.isCorrectTitle(), "Tiêu đề trang Login không chính xác");
 		softAssert.assertAll();
 		
-		logger.info("***** TC_LF_021_BreadcrumbPageTitleURL *****");
+		logger.info("***** TC_LF_015_BreadcrumbPageTitleURL *****");
 	}
 }

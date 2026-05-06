@@ -145,8 +145,8 @@ public class CheckoutPositiveTest extends BaseClass {
 	}
 	
 	@Test
-	public void TC_CO_002_Checkout_NavigateFromShoppingCartPage() {
-		logger.info("***** Bắt đầu TC_CO_002_Checkout_NavigateFromShoppingCartPage *****");
+	public void TC_CO_001_Checkout_NavigateFromShoppingCartPage() {
+		logger.info("***** Bắt đầu TC_CO_001_Checkout_NavigateFromShoppingCartPage *****");
 		
 		HomePage hp = new HomePage(driver);
 		searchAndAddToCart(hp, "iMac", false);
@@ -155,12 +155,12 @@ public class CheckoutPositiveTest extends BaseClass {
 		
 		Assert.assertTrue(cp.isCorrectUrl(), "Lỗi do url trang checkout không chứa '/checkout'");
 		
-		logger.info("***** Kết thúc TC_CO_002_Checkout_NavigateFromShoppingCartPage *****");
+		logger.info("***** Kết thúc TC_CO_001_Checkout_NavigateFromShoppingCartPage *****");
 	}
 	
 	@Test
-	public void TC_CO_003_Checkout_NavigateFromHeaderOption() {
-		logger.info("***** Bắt đầu TC_CO_003_Checkout_NavigateFromHeaderOption *****");
+	public void TC_CO_002_Checkout_NavigateFromHeaderOption() {
+		logger.info("***** Bắt đầu TC_CO_002_Checkout_NavigateFromHeaderOption *****");
 		
 		String nameProduct = "iMac";
 		HomePage hp = new HomePage(driver);
@@ -169,12 +169,12 @@ public class CheckoutPositiveTest extends BaseClass {
 		Assert.assertTrue(cp.isDisplayCheckoutPage(), "Trang checkout không hiển thị");
 		
 		Assert.assertTrue(cp.isCorrectUrl(), "Lỗi do url trang checkout không chứa '/checkout'");
-		logger.info("***** Kết thúc TC_CO_003_Checkout_NavigateFromHeaderOption *****");
+		logger.info("***** Kết thúc TC_CO_002_Checkout_NavigateFromHeaderOption *****");
 	}
 	
 	@Test
-	public void TC_CO_004_Checkout_NavigateFromCartBlock() {
-		logger.info("***** Bắt đầu TC_CO_004_Checkout_NavigateFromCartBlock *****");
+	public void TC_CO_003_Checkout_NavigateFromCartBlock() {
+		logger.info("***** Bắt đầu TC_CO_003_Checkout_NavigateFromCartBlock *****");
 		
 		String nameProduct = "iMac";
 		HomePage hp = new HomePage(driver);
@@ -184,13 +184,13 @@ public class CheckoutPositiveTest extends BaseClass {
 		
 		Assert.assertTrue(cp.isCorrectUrl(), "Lỗi do url trang checkout không chứa '/checkout'");
 		
-		logger.info("***** Kết thúc TC_CO_004_Checkout_NavigateFromCartBlock *****");
+		logger.info("***** Kết thúc TC_CO_003_Checkout_NavigateFromCartBlock *****");
 	}
 	
 	// Thanh toán với tài khoản đã login
 	@Test
-	public void TC_CO_005_Checkout_RegUser_ExistingAddress() {
-		logger.info("***** Bắt đầu TC_CO_005_Checkout_RegUser_ExistingAddress *****");
+	public void TC_CO_004_Checkout_RegUser_ExistingAddress() {
+		logger.info("***** Bắt đầu TC_CO_004_Checkout_RegUser_ExistingAddress *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		String address = "Minh Khai - Bắc Từ Liêm, Hà Nội, Ha Noi, Viet Nam";
@@ -205,12 +205,12 @@ public class CheckoutPositiveTest extends BaseClass {
         
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_005_Checkout_RegUser_ExistingAddress *****");
+		logger.info("***** Kết thúc TC_CO_004_Checkout_RegUser_ExistingAddress *****");
 	}
 	
 	@Test
-	public void TC_CO_006_Checkout_RegUser_NewBillingMandatory() throws InterruptedException {
-		logger.info("***** Bắt đầu TC_CO_006_Checkout_RegUser_NewBillingMandatory *****");
+	public void TC_CO_005_Checkout_RegUser_NewBillingMandatory() throws InterruptedException {
+		logger.info("***** Bắt đầu TC_CO_005_Checkout_RegUser_NewBillingMandatory *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		String address = "Minh Khai - Bắc Từ Liêm, Hà Nội, Ha Noi, Viet Nam";
@@ -238,12 +238,12 @@ public class CheckoutPositiveTest extends BaseClass {
         
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_006_Checkout_RegUser_NewBillingMandatory *****");
+		logger.info("***** Kết thúc TC_CO_005_Checkout_RegUser_NewBillingMandatory *****");
 	}
 	
 	@Test
-	public void TC_CO_007_Checkout_RegUser_NewBillingAllFields() throws InterruptedException {
-		logger.info("***** Bắt đầu TC_CO_007_Checkout_RegUser_NewBillingAllFields *****");
+	public void TC_CO_006_Checkout_RegUser_NewBillingAllFields() throws InterruptedException {
+		logger.info("***** Bắt đầu TC_CO_006_Checkout_RegUser_NewBillingAllFields *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		String address = "Minh Khai - Bắc Từ Liêm, Hà Nội, Ha Noi, Viet Nam";
@@ -267,12 +267,12 @@ public class CheckoutPositiveTest extends BaseClass {
         
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_007_Checkout_RegUser_NewBillingAllFields *****");
+		logger.info("***** Kết thúc TC_CO_006_Checkout_RegUser_NewBillingAllFields *****");
 	}
 	
 	@Test(dataProvider="addressCheckoutData", dataProviderClass = DataProviders.class)
-	public void TC_CO_010_Checkout_RegUser_NewDeliveryMandatory(String isVat, String add1, String add2, String city, String country, String region) {
-		logger.info("***** Bắt đầu TC_CO_010_Checkout_RegUser_NewDeliveryMandatory *****");
+	public void TC_CO_007_Checkout_RegUser_NewDeliveryMandatory(String isVat, String add1, String add2, String city, String country, String region) {
+		logger.info("***** Bắt đầu TC_CO_007_Checkout_RegUser_NewDeliveryMandatory *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		String address = "Minh Khai - Bắc Từ Liêm, Hà Nội, Ha Noi, Viet Nam";
@@ -304,12 +304,12 @@ public class CheckoutPositiveTest extends BaseClass {
         
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_010_Checkout_RegUser_NewDeliveryMandatory *****");
+		logger.info("***** Kết thúc TC_CO_007_Checkout_RegUser_NewDeliveryMandatory *****");
 	}
 	
 	@Test(dataProvider="addressCheckoutData", dataProviderClass = DataProviders.class)
-	public void TC_CO_011_Checkout_RegUser_NewDeliveryAllFields(String isVat, String add1, String add2, String city, String country, String region) {
-		logger.info("***** Bắt đầu TC_CO_011_Checkout_RegUser_NewDeliveryAllFields *****");
+	public void TC_CO_008_Checkout_RegUser_NewDeliveryAllFields(String isVat, String add1, String add2, String city, String country, String region) {
+		logger.info("***** Bắt đầu TC_CO_008_Checkout_RegUser_NewDeliveryAllFields *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		String address = "Minh Khai - Bắc Từ Liêm, Hà Nội, Ha Noi, Viet Nam";
@@ -340,35 +340,35 @@ public class CheckoutPositiveTest extends BaseClass {
         
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_011_Checkout_RegUser_NewDeliveryAllFields *****");
+		logger.info("***** Kết thúc TC_CO_008_Checkout_RegUser_NewDeliveryAllFields *****");
 	}
 	
 	@Test
-	public void TC_CO_014_Checkout_AddCommentDeliveryMethod() {
-		logger.info("***** Bắt đầu TC_CO_014_Checkout_AddCommentDeliveryMethod *****");
+	public void TC_CO_009_Checkout_AddCommentDeliveryMethod() {
+		logger.info("***** Bắt đầu TC_CO_009_Checkout_AddCommentDeliveryMethod *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		completeCheckoutWithComment(softAssert, true, false);
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_014_Checkout_AddCommentDeliveryMethod *****");
+		logger.info("***** Kết thúc TC_CO_009_Checkout_AddCommentDeliveryMethod *****");
 	}
 	
 	@Test
-	public void TC_CO_015_Checkout_AddCommentPaymentMethod() {
-		logger.info("***** Bắt đầu TC_CO_015_Checkout_AddCommentPaymentMethod *****");
+	public void TC_CO_010_Checkout_AddCommentPaymentMethod() {
+		logger.info("***** Bắt đầu TC_CO_010_Checkout_AddCommentPaymentMethod *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		completeCheckoutWithComment(softAssert, false, true);
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_015_Checkout_AddCommentPaymentMethod *****");
+		logger.info("***** Kết thúc TC_CO_010_Checkout_AddCommentPaymentMethod *****");
 	}
 
 
 	@Test(dataProvider="addressCheckoutData", dataProviderClass = DataProviders.class)
-	public void TC_CO_016_Checkout_GuestFlow(String isVat, String add1, String add2, String city, String country, String region) {
-		logger.info("***** Bắt đầu TC_CO_016_Checkout_GuestFlow *****");
+	public void TC_CO_011_Checkout_GuestFlow(String isVat, String add1, String add2, String city, String country, String region) {
+		logger.info("***** Bắt đầu TC_CO_011_Checkout_GuestFlow *****");
 		
 		HomePage hp = new HomePage(driver);
 		searchAndAddToCart(hp, "iMac", true);
@@ -382,13 +382,13 @@ public class CheckoutPositiveTest extends BaseClass {
 		
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_016_Checkout_GuestFlow *****");
+		logger.info("***** Kết thúc TC_CO_011_Checkout_GuestFlow *****");
 	}
 	
 	// Test case này bị lỗi gửi mail khi register nên fail
 	@Test(dataProvider="addressCheckoutData", dataProviderClass = DataProviders.class)
-	public void TC_CO_017_Checkout_NewUserRegistration(String isVat, String add1, String add2, String city, String country, String region) {
-		logger.info("***** Bắt đầu TC_CO_017_Checkout_NewUserRegistration *****");
+	public void TC_CO_012_Checkout_NewUserRegistration(String isVat, String add1, String add2, String city, String country, String region) {
+		logger.info("***** Bắt đầu TC_CO_012_Checkout_NewUserRegistration *****");
 		
 		HomePage hp = new HomePage(driver);
 		searchAndAddToCart(hp, "iMac", true);
@@ -402,12 +402,12 @@ public class CheckoutPositiveTest extends BaseClass {
 		
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_017_Checkout_NewUserRegistration *****");
+		logger.info("***** Kết thúc TC_CO_012_Checkout_NewUserRegistration *****");
 	}
 	
 	@Test
-	public void TC_CO_018_Checkout_LoginDuringFlow() {
-		logger.info("***** Bắt đầu TC_CO_018_Checkout_LoginDuringFlow *****");
+	public void TC_CO_013_Checkout_LoginDuringFlow() {
+		logger.info("***** Bắt đầu TC_CO_013_Checkout_LoginDuringFlow *****");
 		
 		HomePage hp = new HomePage(driver);
 		searchAndAddToCart(hp, "iMac", true);
@@ -445,6 +445,6 @@ public class CheckoutPositiveTest extends BaseClass {
 		
 	    softAssert.assertAll();
 	    
-		logger.info("***** Kết thúc TC_CO_018_Checkout_LoginDuringFlow *****");
+		logger.info("***** Kết thúc TC_CO_013_Checkout_LoginDuringFlow *****");
 	}
 }

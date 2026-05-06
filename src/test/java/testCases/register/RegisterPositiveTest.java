@@ -78,8 +78,8 @@ public class RegisterPositiveTest extends BaseClass {
 	
 	
 	@Test(groups = {"Regression", "Master"}, dataProvider="Newsletter", dataProviderClass=DataProviders.class)
-	public void TC_RF_005_registerWithNewsletterSubscriptionYes_TC_RF_006_registerWithNewsletterSubscriptionNo(boolean newsletter) {
-		logger.info("***** Bắt đầu TC_RF_005_registerWithNewsletterSubscriptionYes và TC_RF_006_registerWithNewsletterSubscriptionNo *****");
+	public void TC_RF_004_registerWithNewsletterSubscriptionYes_TC_RF_005_registerWithNewsletterSubscriptionNo(boolean newsletter) {
+		logger.info("***** Bắt đầu TC_RF_004_registerWithNewsletterSubscriptionYes và TC_RF_005_registerWithNewsletterSubscriptionNo *****");
 		
 		RegisterData data = TestDataFactory.validData();
 		data.setNewsletter(newsletter);
@@ -92,12 +92,12 @@ public class RegisterPositiveTest extends BaseClass {
 		NewsletterSubscriptionPage news = myacc.clickNewsletter();
 		Assert.assertTrue(news.isNewsletterSelected(newsletter), "Lỗi ER-3: Lựa chọn " + (newsletter ? "Yes" : "No") + "không được chọn mặc định");
 		
-		logger.info("***** Kết thúc TC_RF_005_registerWithNewsletterSubscriptionYes và TC_RF_006_registerWithNewsletterSubscriptionNo *****");
+		logger.info("***** Kết thúc TC_RF_004_registerWithNewsletterSubscriptionYes và TC_RF_005_registerWithNewsletterSubscriptionNo *****");
 	}
 
 	@Test
-	public void TC_RF_012_registerUsingKeyboardKeysOnly() {
-		logger.info("***** Bắt đầu TC_RF_012_registerUsingKeyboardKeysOnly *****");
+	public void TC_RF_006_registerUsingKeyboardKeysOnly() {
+		logger.info("***** Bắt đầu TC_RF_006_registerUsingKeyboardKeysOnly *****");
 		
 		RegisterData data = TestDataFactory.validData();
 		AccountSuccessPage acc = regpage.fillRegistrationFormByKeyboard(data);
@@ -105,6 +105,6 @@ public class RegisterPositiveTest extends BaseClass {
 		logger.info("Đang xác thực ER-1: Expected message..");
 		Assert.assertEquals(acc.getConfirmationMsg(), "Your Account Has Been Created!", "Lỗi ER-1: Message xác nhận không khớp");
 		
-		logger.info("***** Kết thúc TC_RF_012_registerUsingKeyboardKeysOnly *****");
+		logger.info("***** Kết thúc TC_RF_006_registerUsingKeyboardKeysOnly *****");
 	}
 }

@@ -23,17 +23,17 @@ public class DataProviders {
 	@DataProvider(name="emailValidationData")
 	public Object[][] emailValidationData() {
 		return new Object[][] {
-			{"TC_RF_010_INVALID_FORMAT_MISSING_DOMAIN", "abc@", "E-Mail Address does not appear to be valid!"},
+			{"TC_RF_011_INVALID_FORMAT_MISSING_DOMAIN", "abc@", "E-Mail Address does not appear to be valid!"},
 	        
-	        {"TC_RF_010_EMPTY_EMAIL", "", "E-Mail Address does not appear to be valid!"},
+	        {"TC_RF_011_EMPTY_EMAIL", "", "E-Mail Address does not appear to be valid!"},
 	        
-	        {"TC_RF_010_MISSING_AT_SIGN", "hapham.gmail.com", "E-Mail Address does not appear to be valid!"},
+	        {"TC_RF_011_MISSING_AT_SIGN", "hapham.gmail.com", "E-Mail Address does not appear to be valid!"},
 
-	        {"TC_RF_010_EMAIL_WITH_SPACE", "ha pham@gmail.com", "E-Mail Address does not appear to be valid!"},
+	        {"TC_RF_011_EMAIL_WITH_SPACE", "ha pham@gmail.com", "E-Mail Address does not appear to be valid!"},
 	        
-	        {"TC_RF_010_MISSING_DOT_COM", "hapham@gmail", "E-Mail Address does not appear to be valid!"},
+	        {"TC_RF_011_MISSING_DOT_COM", "hapham@gmail", "E-Mail Address does not appear to be valid!"},
 	        	        
-	        {"TC_RF_010_EMAIL_TOO_LONG", "thisisaverylongemailaddressexceedingthelimitofopencartvalidationatthismoment@gmail.com", "E-Mail Address does not appear to be valid!"}
+	        {"TC_RF_011_EMAIL_TOO_LONG", "thisisaverylongemailaddressexceedingthelimitofopencartvalidationatthismoment@gmail.com", "E-Mail Address does not appear to be valid!"}
 		};
 	}
 	
@@ -79,13 +79,13 @@ public class DataProviders {
 	@DataProvider(name="loginValidationData")
 	public Object[][] loginValidationData() {
 		return new Object[][] {
-			{"TC_LF_002_LoginWithInvalidCredentials", "wrong_email@gmail.com", "wrong_pass", "Warning: No match for E-Mail Address and/or Password."},
+			{"TC_LF_004_LoginWithInvalidCredentials", "wrong_email@gmail.com", "wrong_pass", "Warning: No match for E-Mail Address and/or Password."},
 			
-			{"TC_LF_003_LoginWithInvalidEmailValidPassword", "wrong_email@gmail.com", rb.getString("password"), "Warning: No match for E-Mail Address and/or Password."},
+			{"TC_LF_005_LoginWithInvalidEmailValidPassword", "wrong_email@gmail.com", rb.getString("password"), "Warning: No match for E-Mail Address and/or Password."},
 			
-			{"TC_LF_004_LoginWithValidEmailInvalidPassword", "hathuha@gmail.com", "wrong_pass", "Warning: No match for E-Mail Address and/or Password."},
+			{"TC_LF_006_LoginWithValidEmailInvalidPassword", "hathu@gmail.com", "wrong_pass", "Warning: No match for E-Mail Address and/or Password."},
 			
-			{"TC_LF_005_LoginWithoutCredentials", "", "", "Warning: No match for E-Mail Address and/or Password."}
+			{"TC_LF_007_LoginWithoutCredentials", "", "", "Warning: No match for E-Mail Address and/or Password."}
 		};
 	}
 	

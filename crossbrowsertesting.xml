@@ -21,6 +21,8 @@
             </class>
             
             <class name="testCases.addToCart.AddToCartSystemTest"/>
+            
+            <class name="testCases.checkout.CheckoutSystemTest"/>
         </classes>
     </test>
 
@@ -39,7 +41,10 @@
                     <include name="TC_LF_023_SupportedEnvironments"/>
                 </methods>
             </class>
+            
             <class name="testCases.addToCart.AddToCartSystemTest"/>
+            
+            <class name="testCases.checkout.CheckoutSystemTest"/>
         </classes>
     </test>
 </suite> 

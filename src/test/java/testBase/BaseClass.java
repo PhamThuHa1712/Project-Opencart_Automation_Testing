@@ -88,6 +88,7 @@ public class BaseClass {
 		}
 	    
 	    driver.manage().window().maximize();
+	    //System.out.println("App URL: " + p.getProperty("appURL"));
 	}
 	
 	@BeforeMethod(groups = {"Regression", "Master"})

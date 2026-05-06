@@ -1,5 +1,6 @@
 package testCases.checkout;
 
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import org.testng.annotations.Test;
@@ -28,12 +29,12 @@ public class CheckoutUITest extends BaseClass {
 	}
 	
 	@Test
-	public void TC_CO_008_Checkout_BillingPlaceholderCheck() {
-		logger.info("***** Bắt đầu TC_CO_008_Checkout_BillingPlaceholderCheck *****");
+	public void TC_CO_017_Checkout_BillingPlaceholderCheck() {
+		logger.info("***** Bắt đầu TC_CO_017_Checkout_BillingPlaceholderCheck *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		searchAndAddToCart("iMac");
-		cp.selectNewAddressBilling().clickBtnBillingCtn();
+		cp.selectNewAddressBilling();
 		
 		softAssert.assertTrue(cp.getPlaceHoderFirstNameBilling().contains("First Name"), "Placehoder trường First Name không hiển thị");
 		softAssert.assertTrue(cp.getPlaceHoderLastNameBilling().contains("Last Name"), "Placehoder trường Last Name không hiển thị");
@@ -44,6 +45,44 @@ public class CheckoutUITest extends BaseClass {
 		softAssert.assertTrue(cp.getPlaceHoderPostcodeBilling().contains("Post Code"), "Placehoder trường Postcode không hiển thị");
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_CO_008_Checkout_BillingPlaceholderCheck *****");
+		logger.info("***** Kết thúc TC_CO_017_Checkout_BillingPlaceholderCheck *****");
+	}
+	
+	@Test
+	public void TC_CO_018_Checkout_DeliveryPlaceholderCheck() {
+		logger.info("***** Bắt đầu TC_CO_018_Checkout_DeliveryPlaceholderCheck *****");
+		
+		SoftAssert softAssert = new SoftAssert();
+		searchAndAddToCart("iMac");
+		cp.clickBtnBillingCtn().selectNewAddressDelivery();
+		
+		softAssert.assertTrue(cp.getPlaceHoderFirstNameDelivery().contains("First Name"), "Placehoder trường First Name không hiển thị");
+		softAssert.assertTrue(cp.getPlaceHoderLastNameDelivery().contains("Last Name"), "Placehoder trường Last Name không hiển thị");
+		softAssert.assertTrue(cp.getPlaceHoderCompanyDelivery().contains("Company"), "Placehoder trường Company không hiển thị");
+		softAssert.assertTrue(cp.getPlaceHoderAddress1Delivery().contains("Address 1"), "Placehoder trường Address 1 không hiển thị");
+		softAssert.assertTrue(cp.getPlaceHoderAddress2Delivery().contains("Address 2"), "Placehoder trường Address 2 không hiển thị");
+		softAssert.assertTrue(cp.getPlaceHoderCityDelivery().contains("City"), "Placehoder trường City không hiển thị");
+		softAssert.assertTrue(cp.getPlaceHoderPostcodeDelivery().contains("Post Code"), "Placehoder trường Postcode không hiển thị");
+		softAssert.assertAll();
+		
+		logger.info("***** Kết thúc TC_CO_018_Checkout_DeliveryPlaceholderCheck *****");
+	}
+	
+	@Test
+	public void TC_CO_019_Checkout_UIAdherence() {
+		logger.info("***** Bắt đầu TC_CO_019_Checkout_UIAdherence *****");
+		
+		HomePage hp = new HomePage(driver);
+		CheckoutPage cp = hp.searchProduct("iMac").clickAddToCart().clickShoppingCart().clickCheckout();
+		
+		SoftAssert softAssert = new SoftAssert();
+		softAssert.assertEquals(cp.getBreadcrumbCorrect(), Arrays.asList("Shopping Cart", "Checkout"), "Breadcrumb hiển thị không đúng");
+		softAssert.assertTrue(cp.isDisplayCheckoutPage(), "Heading trang không đúng");
+		softAssert.assertTrue(cp.getUrl().contains("checkout"), "Url không đúng");
+		softAssert.assertTrue(cp.getTitle().contains("Checkout"), "Tiêu đề trang không đúng");
+		
+		softAssert.assertAll();
+		
+		logger.info("***** Kết thúc TC_CO_019_Checkout_UIAdherence *****");
 	}
 }

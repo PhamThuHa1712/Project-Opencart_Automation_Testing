@@ -25,18 +25,18 @@ public class LoginSecurityTest extends BaseClass {
 	
 	
 	@Test
-	public void TC_LF_013_PasswordVisibilityToggled() {
-		logger.info("***** Bắt đầu TC_LF_013_PasswordVisibilityToggled *****");
+	public void TC_LF_016_PasswordVisibilityToggled() {
+		logger.info("***** Bắt đầu TC_LF_016_PasswordVisibilityToggled *****");
 		
 		lp.typePassword(rb.getString("password"));
 		Assert.assertEquals(lp.getAttributePwd("type"), "password", "Trường Password không được ẩn dưới dạng * or .");
 		
-		logger.info("***** Kết thúc TC_LF_013_PasswordVisibilityToggled *****");
+		logger.info("***** Kết thúc TC_LF_016_PasswordVisibilityToggled *****");
 	}
 	
 	@Test
-	public void TC_LF_014_verifyPasswordCopyIsBlocked() {
-		logger.info("***** Bắt đầu TC_LF_014_verifyPasswordCopyIsBlocked *****");
+	public void TC_LF_017_verifyPasswordCopyIsBlocked() {
+		logger.info("***** Bắt đầu TC_LF_017_verifyPasswordCopyIsBlocked *****");
 		
 		String password = randomAlphaNumberic();
 		
@@ -44,12 +44,12 @@ public class LoginSecurityTest extends BaseClass {
 		
 		Assert.assertNotEquals(copiedPwd, password, "Hệ thống không ngăn chặn copy dữ liệu trường Password thông qua Ctrl + c");
 		
-		logger.info("***** Kết thúc TC_LF_014_verifyPasswordCopyIsBlocked *****");
+		logger.info("***** Kết thúc TC_LF_017_verifyPasswordCopyIsBlocked *****");
 	}
 	
 	@Test
-	public void TC_LF_015_PasswordNotVisibleInPageSource() {
-		logger.info("***** Bắt đầu TC_LF_015_PasswordNotVisibleInPageSource *****");
+	public void TC_LF_018_PasswordNotVisibleInPageSource() {
+		logger.info("***** Bắt đầu TC_LF_018_PasswordNotVisibleInPageSource *****");
 		SoftAssert softAssert = new SoftAssert();
 		String pwd = "abcd";
 		String typePwd = lp.typePassword(pwd).getAttributePwd("type");
@@ -59,15 +59,14 @@ public class LoginSecurityTest extends BaseClass {
 		softAssert.assertFalse(pwdSource, "Mật khẩu hiển thị trên mã nguồn của trang");
 		
 		softAssert.assertAll();
-		logger.info("***** Kết thúc TC_LF_015_PasswordNotVisibleInPageSource *****");
+		logger.info("***** Kết thúc TC_LF_018_PasswordNotVisibleInPageSource *****");
 	}
 	
 	@Test
-	public void TC_LF_018_LoginSessionTimeout() {
-		logger.info("***** Bắt đầu TC_LF_018_LoginSessionTimeout *****");
+	public void TC_LF_019_LoginSessionTimeout() {
+		logger.info("***** Bắt đầu TC_LF_019_LoginSessionTimeout *****");
 		
 		MyAccountPage macc = lp.typeEmail(rb.getString("email")).typePassword(rb.getString("password")).clickLoginSuccess();
-		// MyAccountPage macc = lp.typeEmail("nguyenlinh@gmail.com").typePassword("123456").clickLoginSuccess();
 		Assert.assertTrue(macc.isMyAccountPageExists(), "Đăng nhập không thành công!");
 		
 		driver.manage().deleteAllCookies();
@@ -75,6 +74,6 @@ public class LoginSecurityTest extends BaseClass {
 		driver.navigate().refresh();
 		Assert.assertTrue(lp.displayLoginPage(), "Trang login vẫn hiển thị khi token hết hạn");
 		
-		logger.info("***** Kết thúc TC_LF_018_LoginSessionTimeout *****");
+		logger.info("***** Kết thúc TC_LF_019_LoginSessionTimeout *****");
 	}
 }

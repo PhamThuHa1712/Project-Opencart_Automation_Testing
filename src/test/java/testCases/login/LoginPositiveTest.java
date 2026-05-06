@@ -41,20 +41,20 @@ public class LoginPositiveTest extends BaseClass {
 	}
 	
 	@Test
-	public void TC_LF_007_LoginUsingKeyboardKeys() {
-		logger.info("***** Bắt đầu TC_LF_007_LoginUsingKeyboardKeys *****");
+	public void TC_LF_002_LoginUsingKeyboardKeys() {
+		logger.info("***** Bắt đầu TC_LF_002_LoginUsingKeyboardKeys *****");
 		
 		MyAccountPage acc = lp.setEmailByTabKey(rb.getString("email")).setPasswordByTabKey(rb.getString("password")).clickCtnByTabKeySuccess();
 		
 		Assert.assertTrue(acc.isCorrectUrl(), "URL trang My Account không khớp");
 		Assert.assertTrue(acc.isMyAccountPageExists(), "Trang My Account không hiển thị");
 		
-		logger.info("***** Kết thúc TC_LF_007_LoginUsingKeyboardKeys *****");
+		logger.info("***** Kết thúc TC_LF_002_LoginUsingKeyboardKeys *****");
 	}
 	
 	@Test
-	public void TC_LF_016_LoginAfterChangingPassword() {
-		logger.info("***** Bắt đầu TC_LF_016_LoginAfterChangingPassword *****");
+	public void TC_LF_003_LoginAfterChangingPassword() {
+		logger.info("***** Bắt đầu TC_LF_003_LoginAfterChangingPassword *****");
 		
 		String email = rb.getString("email");
 		String oldPwd = rb.getString("password");
@@ -91,6 +91,6 @@ public class LoginPositiveTest extends BaseClass {
 			logger.info("Đã khôi phục mật khẩu cũ thành công!");
 		}
 		
-		logger.info("***** Kết thúc TC_LF_016_LoginAfterChangingPassword *****");
+		logger.info("***** Kết thúc TC_LF_003_LoginAfterChangingPassword *****");
 	}
 }

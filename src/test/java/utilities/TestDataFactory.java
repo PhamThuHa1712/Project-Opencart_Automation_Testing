@@ -51,7 +51,7 @@ public class TestDataFactory {
 
     public static String getExistingEmail() {
     		try {
-            return rb.getString("email");
+            return rb.getString("existEmail");
         } catch (Exception e) {
             throw new RuntimeException("FAILED: Key 'email' không tồn tại trong file config.properties!");
         }

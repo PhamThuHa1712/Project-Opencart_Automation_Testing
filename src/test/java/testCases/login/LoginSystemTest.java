@@ -27,8 +27,8 @@ public class LoginSystemTest extends BaseClass {
 	
 	
 	@Test
-	public void TC_LF_017_LoginClosingBrowserWithoutLoggingOut() throws IOException {
-	    logger.info("***** Bắt đầu TC_LF_017_LoginClosingBrowserWithoutLoggingOut *****");
+	public void TC_LF_020_LoginClosingBrowserWithoutLoggingOut() throws IOException {
+	    logger.info("***** Bắt đầu TC_LF_020_LoginClosingBrowserWithoutLoggingOut *****");
 	    
 	    MyAccountPage macc = lp.typeEmail(rb.getString("email"))
 	                           .typePassword(rb.getString("password"))
@@ -69,15 +69,15 @@ public class LoginSystemTest extends BaseClass {
 	    
 	    Assert.assertTrue(isLoggedIn, "Lỗi: Hệ thống không duy trì đăng nhập sau khi đóng trình duyệt!");
 	    
-	    logger.info("***** Kết thúc TC_LF_017_LoginClosingBrowserWithoutLoggingOut *****");
+	    logger.info("***** Kết thúc TC_LF_020_LoginClosingBrowserWithoutLoggingOut *****");
 	}
 	
 	@Test
-	public void TC_LF_023_SupportedEnvironments(){
-		logger.info("***** Bắt đầu TC_LF_023_SupportedEnvironments *****");
+	public void TC_LF_022_SupportedEnvironments(){
+		logger.info("***** Bắt đầu TC_LF_022_SupportedEnvironments *****");
 		
 		Assert.assertTrue(lp.displayLoginPage(), "Trang đăng nhập không hoạt động trên trình duyệt hiện tại");
 		
-		logger.info("***** Kết thúc TC_LF_023_SupportedEnvironments *****");
+		logger.info("***** Kết thúc TC_LF_022_SupportedEnvironments *****");
 	}
 }

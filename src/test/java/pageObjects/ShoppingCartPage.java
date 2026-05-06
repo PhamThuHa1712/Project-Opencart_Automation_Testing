@@ -2,9 +2,12 @@ package pageObjects;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ShoppingCartPage extends BasePage {
 	public ShoppingCartPage(WebDriver driver) {
@@ -24,6 +27,10 @@ public class ShoppingCartPage extends BasePage {
 	private final By inputQuantity = By.xpath("//table[@class='table table-bordered']//tbody//tr//input");
 	
 	private final By btnUpdate = By.cssSelector("button[type='submit']");
+	
+	private final By heading = By.cssSelector("div[id='content'] h1");
+	
+	private final By breadcrumb = By.cssSelector(".breadcrumb li");
 	
 	public boolean presenceOfElement(String product) {
 		return isElementInListByText(productName, product);
@@ -79,5 +86,24 @@ public class ShoppingCartPage extends BasePage {
 			list.add(subList);
 		}
 		return list;
+	}
+	
+	public String getUrl() {
+		wait.until(ExpectedConditions.urlContains("cart"));
+		return driver.getCurrentUrl();
+	}
+	
+	public String getTitle() {
+		wait.until(ExpectedConditions.titleIs("Shopping Cart"));
+		return driver.getTitle();
+	}
+	
+	public boolean isPageShoppingCartHeading() {
+		return getText(heading, "Heading trang Shopping Cart").contains("Shopping Cart");
+	}
+	
+	public List<String> getBreadcrumbCorrect() {
+		List<WebElement> list = getElements(breadcrumb, "Breadcrumb trang Shopping Cart");
+		return list.stream().map(e -> e.getText().trim()).filter(s -> !s.isEmpty()).collect(Collectors.toList());
 	}
 }

@@ -24,8 +24,8 @@ public class RegisterValidationTest extends BaseClass {
 	}
 	
 	@Test
-	public void TC_RF_004_verifyWarningForEmptyMandatoryFields() {
-		logger.info("***** Bắt đầu TC_RF_004_verifyWarningForEmptyMandatoryFields *****");
+	public void TC_RF_008_verifyWarningForEmptyMandatoryFields() {
+		logger.info("***** Bắt đầu TC_RF_008_verifyWarningForEmptyMandatoryFields *****");
 		
 		SoftAssert softAssert = new SoftAssert();
 		
@@ -40,12 +40,12 @@ public class RegisterValidationTest extends BaseClass {
 		
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_RF_004_verifyWarningForEmptyMandatoryFields *****");
+		logger.info("***** Kết thúc TC_RF_008_verifyWarningForEmptyMandatoryFields *****");
 	}
 	
 	@Test(dataProvider="emailValidationData", dataProviderClass = DataProviders.class, description = "Kiểm tra validate trường Email")
-	public void TC_RF_010_EmailValidation(String caseName, String email, String expectedMessage) {
-		logger.info("***** Bắt đầu TC_RF_010_EmailValidation *****");
+	public void TC_RF_011_EmailValidation(String caseName, String email, String expectedMessage) {
+		logger.info("***** Bắt đầu TC_RF_011_EmailValidation *****");
 		
 		RegisterData data = TestDataFactory.validData();
 		data.setEmail(email);
@@ -56,12 +56,12 @@ public class RegisterValidationTest extends BaseClass {
 		
 		Assert.assertEquals(regpage.displayMsgEmail(), expectedMessage, "[" + caseName + "] thông báo email sai định dạng không khớp!");
 		
-		logger.info("***** Kết thúc TC_RF_010_EmailValidation *****");
+		logger.info("***** Kết thúc TC_RF_011_EmailValidation *****");
 	}
 	
 	@Test(description = "Đăng ký với Email đã tồn tại trong hệ thống")
-	public void TC_RF_009_RegisterWithExistingEmail() {
-		logger.info("***** Bắt đầu TC_RF_009_RegisterWithExistingEmail *****");
+	public void TC_RF_010_RegisterWithExistingEmail() {
+		logger.info("***** Bắt đầu TC_RF_010_RegisterWithExistingEmail *****");
 		
 		RegisterData data = TestDataFactory.validData();
 		data.setEmail(TestDataFactory.getExistingEmail());
@@ -70,12 +70,12 @@ public class RegisterValidationTest extends BaseClass {
 		
 		Assert.assertEquals(regpage.displayEmailExists(), "Warning: E-Mail Address is already registered!", "Thông báo email đã tồn tại không khớp!");
 		
-		logger.info("***** Kết thúc TC_RF_009_RegisterWithExistingEmail *****");
+		logger.info("***** Kết thúc TC_RF_010_RegisterWithExistingEmail *****");
 	}
 	
 	@Test(description = "Đăng ký với mật khẩu và mật khẩu xác nhận không khớp")
-	public void TC_RF_008_verifyWarningForPasswordMismatch() {
-		logger.info("***** Bắt đầu TC_RF_008_verifyWarningForPasswordMismatch *****");
+	public void TC_RF_009_verifyWarningForPasswordMismatch() {
+		logger.info("***** Bắt đầu TC_RF_009_verifyWarningForPasswordMismatch *****");
 		
 		RegisterData data = TestDataFactory.validData();
 		data.setPassword("12345");
@@ -85,12 +85,12 @@ public class RegisterValidationTest extends BaseClass {
 		
 		Assert.assertEquals(regpage.displayMsgConfPassword(), "Password confirmation does not match password!", "Thông báo mật khẩu xác nhận không khớp không đúng!");
 		
-		logger.info("***** Kết thúc TC_RF_008_verifyWarningForPasswordMismatch *****");
+		logger.info("***** Kết thúc TC_RF_009_verifyWarningForPasswordMismatch *****");
 	}
 	
 	@Test(dataProvider="phoneValidationData", dataProviderClass = DataProviders.class)
-	public void TC_RF_011_verifyWarningForInvalidPhoneNumber(String caseName, String phone, String expectedMessage) {
-		logger.info("***** Bắt đầu TC_RF_011_verifyWarningForInvalidPhoneNumber *****");
+	public void TC_RF_012_verifyWarningForInvalidPhoneNumber(String caseName, String phone, String expectedMessage) {
+		logger.info("***** Bắt đầu TC_RF_012_verifyWarningForInvalidPhoneNumber *****");
 				
 		RegisterData data = TestDataFactory.validData();
 		data.setPhone(phone);
@@ -105,12 +105,12 @@ public class RegisterValidationTest extends BaseClass {
 	    		Assert.assertEquals(regpage.displayMsgPhone(), expectedMessage, "Thông báo lỗi trường Telephone không khớp");
 	    }
 	    
-		logger.info("***** Kết thúc TC_RF_011_verifyWarningForInvalidPhoneNumber *****");
+		logger.info("***** Kết thúc TC_RF_012_verifyWarningForInvalidPhoneNumber *****");
 	}
 	
 	@Test
-	public void TC_RF_016_verifyWarningWhenEnteringOnlySpaces() {
-		logger.info("***** Bắt đầu TC_RF_016_verifyWarningWhenEnteringOnlySpaces *****");
+	public void TC_RF_013_verifyWarningWhenEnteringOnlySpaces() {
+		logger.info("***** Bắt đầu TC_RF_013_verifyWarningWhenEnteringOnlySpaces *****");
 		
 		RegisterData data = TestDataFactory.multipleSpaceData(5);
 		regpage.fillRegisterForm(data).clickContinueFail();
@@ -125,12 +125,12 @@ public class RegisterValidationTest extends BaseClass {
 		
 		softAssert.assertAll();
 		
-		logger.info("***** Kết thúc TC_RF_016_verifyWarningWhenEnteringOnlySpaces  *****");
+		logger.info("***** Kết thúc TC_RF_013_verifyWarningWhenEnteringOnlySpaces  *****");
 	}
 	
 	@Test(dataProvider="passwordValidationData", dataProviderClass=DataProviders.class)
-	public void TC_RF_017_verifyPasswordComplexityStandards(String caseName, String pwd, String expectedMessage) {
-        logger.info("***** Bắt đầu TC_RF_017_verifyPasswordComplexityStandards *****");
+	public void TC_RF_014_verifyPasswordComplexityStandards(String caseName, String pwd, String expectedMessage) {
+        logger.info("***** Bắt đầu TC_RF_014_verifyPasswordComplexityStandards *****");
                 
         RegisterData data = TestDataFactory.validData();
         data.setPassword(pwd);
@@ -145,12 +145,12 @@ public class RegisterValidationTest extends BaseClass {
         		Assert.assertEquals(regpage.displayMsgPassword(), expectedMessage, "Thông báo lỗi trường Password không khớp");
         }
         
-        logger.info("***** Kết thúc TC_RF_017_verifyPasswordComplexityStandards *****");
+        logger.info("***** Kết thúc TC_RF_014_verifyPasswordComplexityStandards *****");
 	}
 	
 	@Test(groups = {"Master"}, description = "Kiểm tra validate trường Privacy Policy")
-    public void TC_RF_021_verifyWarningWhenPrivacyPolicyNotAccepted() {
-        logger.info("***** Bắt đầu TC_RF_021_verifyWarningWhenPrivacyPolicyNotAccepted *****");
+    public void TC_RF_015_verifyWarningWhenPrivacyPolicyNotAccepted() {
+        logger.info("***** Bắt đầu TC_RF_015_verifyWarningWhenPrivacyPolicyNotAccepted *****");
 
         RegisterData data = TestDataFactory.validData();
         data.setPrivacyPolicy(false);
@@ -159,12 +159,12 @@ public class RegisterValidationTest extends BaseClass {
 
         Assert.assertEquals(regpage.displayMsgPolicy(), "Warning: You must agree to the Privacy Policy!", "Thông báo lỗi Privacy Policy không hiển thị");
 
-        logger.info("***** Kết thúc TC_RF_021_verifyWarningWhenPrivacyPolicyNotAccepted *****");
+        logger.info("***** Kết thúc TC_RF_015_verifyWarningWhenPrivacyPolicyNotAccepted *****");
     }
 
     @Test(groups = {"Master"})
-    public void TC_RF_024_verifyWarningForEmptyPasswordConfirm() {
-        logger.info("***** Bắt đầu TC_RF_024_verifyWarningForEmptyPasswordConfirm *****");
+    public void TC_RF_016_verifyWarningForEmptyPasswordConfirm() {
+        logger.info("***** Bắt đầu TC_RF_016_verifyWarningForEmptyPasswordConfirm *****");
 
         RegisterData data = TestDataFactory.validData();
         data.setConfirmPassword("");
@@ -173,6 +173,6 @@ public class RegisterValidationTest extends BaseClass {
         
         Assert.assertEquals(regpage.displayMsgConfPassword(), "Password confirmation does not match password!", "Thông báo lỗi Password Confirm không hiển thị");
 
-        logger.info("***** Kết thúc TC_RF_024_verifyWarningForEmptyPasswordConfirm *****");
+        logger.info("***** Kết thúc TC_RF_016_verifyWarningForEmptyPasswordConfirm *****");
     }
 }
